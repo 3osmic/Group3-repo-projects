@@ -436,6 +436,8 @@ The command for running your tests are below:
 
 `behave features\"Feature File Name"`
 
+- To find the feature file path, navigate to the [FAQ](#faq) section of the document. 
+
 ## Feature File Screenshots
 
 ### Registration
@@ -459,5 +461,29 @@ The command for running your tests are below:
 
 ### Installing Packages
 
+- If you are having issues using the behave, selenium, and the screenshot libraries, you might need to install them before running the behave tests.
+- The first sign to look for is whether or not your libraries have red lines underneath (this is an indicator that you might need to install packages)
 
-### Feature File Path
+#### How do I Install Packages For Behave?
+- To install packages for behave, hover over the behave library and select "install packages"
+- You can also use this command: `pip install behave`
+
+#### How do I Install Packages For Selenium?
+- To install packages for selenium, hover over the selenium library and select "install packages"
+- You can also use this command: `pip install selenium`
+
+#### How do I Install Packages For Screenshot?
+- To install packages for screenshot, hover over the image library and select "install packages"
+- You can also use this command: `pip install Selenium-Screenshot`
+
+### How to Find the Feature File Path
+- In order to run the behave command, you need to find the feature file path. 
+
+Step 1:
+- Right-click on the top of your repository and click "Open In > Explorer"
+![Explorer](img_7.png)
+
+- Click into the folder of your repository and navigate to where you saved your `.feature` files
+
+**Example:**
+![Terminal](img_8.png)
