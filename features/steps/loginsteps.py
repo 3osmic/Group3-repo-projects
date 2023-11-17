@@ -20,7 +20,7 @@ def user_pass(context):
     time.sleep(2)
     context.driver.find_element(By.ID, 'login-password').send_keys(pi)
     time.sleep(2)
-    screenshot = Image.open("screenshot-2.png")
+    screenshot = Image.open("screenshot2.png")
     screenshot.show()
 
 

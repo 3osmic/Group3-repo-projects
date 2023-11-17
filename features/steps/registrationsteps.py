@@ -25,7 +25,7 @@ def user_fills_information(context):
     time.sleep(2)
     context.driver.find_element(By.ID, "signupConfirmPassword").send_keys("password123")
     time.sleep(2)
-    screenshot = Image.open("screenshot-2.png")
+    screenshot = Image.open("screenshot1.png")
     screenshot.show()
 
 

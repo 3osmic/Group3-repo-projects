@@ -166,7 +166,7 @@ def user_fills_information(context):
     time.sleep(2)
     context.driver.find_element(By.ID, "signupConfirmPassword").send_keys("password123")
     time.sleep(2)
-    screenshot = Image.open("screenshot-2.png")
+    screenshot = Image.open("screenshot1.png")
     screenshot.show()
 
 
@@ -236,7 +236,7 @@ def user_pass(context):
     time.sleep(2)
     context.driver.find_element(By.ID, 'login-password').send_keys(pi)
     time.sleep(2)
-    screenshot = Image.open("screenshot-2.png")
+    screenshot = Image.open("screenshot2.png")
     screenshot.show()
 
 
@@ -297,7 +297,7 @@ def menu_list(context):
     menu_elements = context.driver.find_elements(By.CLASS_NAME, 'menu')
     assert len(menu_elements) > 0, "No 'menu' elements found on the page"
     time.sleep(2)
-    screenshot = Image.open("screenshot-2.png")
+    screenshot = Image.open("screenshot3.png")
     screenshot.show()
 
 
@@ -439,11 +439,13 @@ The command for running your tests are below:
 ## Feature File Screenshots
 
 ### Registration
+![Registration](img_4.png)
 
 ### Login
+![Login](img_5.png)
 
 ### Menu Display
-
+![Menu-Display](img_6.png)
 
 ### Text-Area (Contact Us)
 ![Text-Area-1](img_2.png)
@@ -456,5 +458,6 @@ The command for running your tests are below:
  <a id="faq"></a>
 
 ### Installing Packages
+
 
 ### Feature File Path
