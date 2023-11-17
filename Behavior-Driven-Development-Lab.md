@@ -68,7 +68,7 @@ Once installed, a "Successfully installed" message should be displayed.
 
 - For more information on behave, visit their website at: https://behave.readthedocs.io/en/latest/
 
-**Note:** If you find that you have problems installing selenium on your computer, please navigate to the [FAQ](#faq) section of this document
+**Note:** If you find that you have problems installing behave on your computer, please navigate to the [FAQ](#faq) section of this document
 
 ## Step 3 (Do It Yourself - Write a Gherkin Feature File)
 Website used for these demonstrations: https://cbarnc.github.io/Group3-repo-projects/
