@@ -58,7 +58,7 @@ PyCharm is a popular integrated development environment (IDE) specifically desig
 5. After installation, you can launch PyCharm Community by finding it in your application menu.
 
 ### Step 2: Install Behave
-You can install Selenium using Python's package manager, pip. Open your command prompt or terminal and run the following command:
+You can install Behave using Python's package manager, pip. Open your command prompt or terminal and run the following command:
 
 `pip install behave`
 
