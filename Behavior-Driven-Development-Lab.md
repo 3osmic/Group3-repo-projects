@@ -143,6 +143,7 @@ from behave import *
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
+from PIL import Image
 
 
 @given('the user is on the registration page')
@@ -165,6 +166,8 @@ def user_fills_information(context):
     time.sleep(2)
     context.driver.find_element(By.ID, "signupConfirmPassword").send_keys("password123")
     time.sleep(2)
+    screenshot = Image.open("screenshot-2.png")
+    screenshot.show()
 
 
 @when('clicks the "Register" button')
@@ -177,6 +180,7 @@ def click_register(context):
 @then('the user should be logged in')
 def redirect(context):
     context.driver.get("https://cbarnc.github.io/Group3-repo-projects/")
+
 ```
 ### BREAKDOWN 1 -
 
@@ -186,7 +190,9 @@ def redirect(context):
     - `webdriver`: The WebDriver module for implementation
     - `By`: Module that allows for locating elements on a webpage
     - `Keys`: Module that allows for keyboard interactions
-    - `time`: Module that deals with time 
+    - `time`: Module that deals with time
+    - `Screenshot`: Module for taking screenshots
+    - `Image`: From the Python Imaging Library (PIL): Used for working with images
 - **Step Definitions** 
   - *user_on_registration*
     - The `@given` decorator, represents the context of the test
@@ -195,11 +201,12 @@ def redirect(context):
     - It then adds a delay of 5 seconds using `time.sleep(5)`
   - *user_fills_information*
     - The `@when` decorator, represents the action of the user filling in their information
-    - It finds elements on the page with the IDs "signupUsername" and "signupEmail" and enters values into them
-    - It adds delays of 5 seconds between actions
+    - It finds elements on the page with the IDs "signupUsername", "signupEmailaddress", "signupPassword", "signupConfirmPassword" and enters values into them
+    - It adds delays of 2 seconds between actions
+    - It uses the `Screenshot` class to capture a screenshot and display it using PIL
   - *click_register*
     - The `@when` decorator, represents the action of the user clicking the "Register" button
-    - It finds an element on the page with the ID "submit-button" and clicks on it
+    - It finds an element on the page with the ID "signupSubmit" and clicks on it
   - *user_login*
     - The `@then` decorator, represents the expected outcome of the test, where the user should be logged in
     - It navigates to the login page using `context.driver.get()`
@@ -211,6 +218,7 @@ from behave import *
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
+from PIL import Image
 
 
 @given('the user is on the login page')
@@ -225,9 +233,11 @@ def user_pass(context):
     ui = "test_user123"
     pi = "password123"
     context.driver.find_element(By.ID, 'login-username').send_keys(ui)
-    time.sleep(5)
+    time.sleep(2)
     context.driver.find_element(By.ID, 'login-password').send_keys(pi)
-    time.sleep(5)
+    time.sleep(2)
+    screenshot = Image.open("screenshot-2.png")
+    screenshot.show()
 
 
 @when('click the "Login" button')
@@ -245,18 +255,19 @@ def redirect(context):
 ### BREAKDOWN 2 -
 
 - **Step Definitions**
-  - *loginPage*
+  - *login_page*
     - The `@given` decorator, represents the context of the test
     - It opens a Chrome web browser using Selenium's `webdriver.Chrome()` and navigates to a specific URL
-  - *userPass*
+  - *user_pass*
     - The `@when` decorator, represents the action of the user entering their username and password
-    - It finds elements on the page with the IDs "username" and "password" and enters values into them
-  - *clickLogin*
+    - It finds elements on the page with the IDs "login-username" and "login-password" and enters values into them
+    - It uses the `Screenshot` class to capture a screenshot and display it using PIL
+  - *click_login*
     - The `@when` decorator, represents the action of the user clicking the "Login" button
-    - It finds an element on the page with the ID "login_button" and clicks on it
+    - It finds an element on the page with the ID "login-submit" and clicks on it
   - *redirect*
     - The `@then` decorator, represents the expected outcome of the test, where the user should be redirected to the dashboard
-    - It navigates to the homepage using `context.driver.current_url`
+    - It navigates to the homepage using `context.driver.get`
 
 ### Scenario 3 (Test Menu Display)
 ```Python
@@ -264,6 +275,7 @@ import time
 from behave import *
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from PIL import Image
 
 
 @given('the user is on the restaurant\'s homepage')
@@ -285,27 +297,29 @@ def menu_list(context):
     menu_elements = context.driver.find_elements(By.CLASS_NAME, 'menu')
     assert len(menu_elements) > 0, "No 'menu' elements found on the page"
     time.sleep(2)
+    screenshot = Image.open("screenshot-2.png")
+    screenshot.show()
 
 
 @then('close browser')
 def close_browser(context):
     context.driver.close()
 
-
 ```
 ### BREAKDOWN 3 -
 
 - **Step Definitions**
-  - *homePage*
+  - *home_page*
     - The `@given` decorator, represents the context of the test
     - It opens a Chrome web browser using Selenium's `webdriver.Chrome()` and navigates to a specific URL
-  - *openMenu*
+  - *open_menu*
     - The `@when` decorator, represents the action of the user clicking the "Menu" section
     - It finds elements on the page with the class name "menu" and determines whether the menu page has items or not
-  - *menuList*
+  - *menu_list*
     - The `@then` decorator, represents the action of the user seeing a list of menu dishes and their prices
     - It finds an element on the page with the class name 'menu'
-  - *closeBrowser*
+    - It uses the `Screenshot` class to capture a screenshot and display it using PIL
+  - *close_browser*
     - The `@then` decorator, represents the expected outcome of the test, where the browser should be closed
     - It closes the browser using `context.driver.close()`
 
@@ -354,18 +368,15 @@ def message_status(context):
 
 ### BREAKDOWN 4 -
 
-- **Import Statements**
-    - `Screenshot`: Module for taking screenshots
-    - `Image`: From the Python Imaging Library (PIL): Used for working with images
 - **Step Definitions**
-  - *emptyComments*
+  - *empty_comments*
     - The `@given` decorator, represents the context of the test
     - It opens a Chrome browser, navigates to a specific URL, and asserts that the comments box is initially empty
     - It uses the `Screenshot` class to capture a screenshot and display it using PIL
-  - *testMessage*
+  - *test_message*
     - The `@when` decorator, represents the action of the user selecting the input box and typing a message
     - It captures a screenshot after the user has typed a message using the `Screenshot` class
-  - *messageStatus*
+  - *message_status*
     - The `@then` decorator, represents the expected outcome of the test, where the application takes a screenshot of what the user wrote
     - This is a visual check to confirm that the comments box is filled as expected
 
@@ -406,14 +417,14 @@ def radio_status(context):
 ### BREAKDOWN 5 -
 
 - **Step Definitions**
-  - *contactUs*
+  - *contact_us*
     - The `@given` decorator, represents the context of the test
     - It opens a Chrome browser, navigates to a specific URL
-  - *selectButton*
+  - *select_button*
     - The `@when` decorator, represents the action of the user selecting the "yes" radio button
     - It finds elements on the page with the name "T3C_member"
     - The application iterates through them, and clicks the one with the value "yes". It then sleeps for 2 seconds
-  - *radioStatus*
+  - *radio_status*
     - The `@then` decorator, represents the expected outcome of the test, where the user should see the "yes" radio button selected
     - It opens the specified URL and then attempts to open a screenshot file named "screenshot-2.png" using PIL and displays it
 

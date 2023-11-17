@@ -2,6 +2,7 @@ import time
 from behave import *
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from PIL import Image
 
 
 @given('the user is on the restaurant\'s homepage')
@@ -23,6 +24,8 @@ def menu_list(context):
     menu_elements = context.driver.find_elements(By.CLASS_NAME, 'menu')
     assert len(menu_elements) > 0, "No 'menu' elements found on the page"
     time.sleep(2)
+    screenshot = Image.open("screenshot-2.png")
+    screenshot.show()
 
 
 @then('close browser')

@@ -2,6 +2,7 @@ from behave import *
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
+from PIL import Image
 
 
 @given('the user is on the login page')
@@ -16,9 +17,11 @@ def user_pass(context):
     ui = "test_user123"
     pi = "password123"
     context.driver.find_element(By.ID, 'login-username').send_keys(ui)
-    time.sleep(5)
+    time.sleep(2)
     context.driver.find_element(By.ID, 'login-password').send_keys(pi)
-    time.sleep(5)
+    time.sleep(2)
+    screenshot = Image.open("screenshot-2.png")
+    screenshot.show()
 
 
 @when('click the "Login" button')

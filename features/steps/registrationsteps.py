@@ -2,6 +2,7 @@ from behave import *
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
+from PIL import Image
 
 
 @given('the user is on the registration page')
@@ -24,6 +25,8 @@ def user_fills_information(context):
     time.sleep(2)
     context.driver.find_element(By.ID, "signupConfirmPassword").send_keys("password123")
     time.sleep(2)
+    screenshot = Image.open("screenshot-2.png")
+    screenshot.show()
 
 
 @when('clicks the "Register" button')
