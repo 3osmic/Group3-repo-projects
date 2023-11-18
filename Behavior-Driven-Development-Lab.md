@@ -1,3 +1,18 @@
+_______________________________________________________________________
+
+	Group 3	BEHAVE LAB	
+_______________________________________________________________________
+
+
+## LAB 02	AUTOMATION WITH BEHAVE
+
+### OBJECTIVES
+- Automate browser actions for web application testing.
+- Understand and utilize Selenium WebDriver using Python.
+- Validate web application UI elements and functionalities.
+- Create a Behave step definitions
+- Provide details on commands commonly used in Behave
+
 ### PREREQUISITES
 - Must have basic knowledge of software testing
 - Must have a basic level of knowledge of the python programming language
@@ -14,12 +29,7 @@ You will need the following in order for your tests to perform correctly
 - Create a GitHub account
   - Clone the GitHub repository
 - Install a code editor
-- Download Behave
-- Install Gherkin
-
-Examples of code editors:
-- VS Code
-- Pycharm (Recommended)
+- Install Behave
 
 ### OVERVIEW
 Behave is a Python library for behavior-driven development (BDD). BDD is a software development methodology that extends test-driven development (TDD) by encouraging collaboration between developers, testers, and non-technical stakeholders like business analysts and product owners. BDD focuses on the behavior of a software system from the user's perspective and emphasizes the use of natural language to describe and document the system's functionality.
@@ -31,31 +41,6 @@ Gherkin is a plain-text, domain-specific language used to describe the behavior 
 
 #### WHAT ARE FEATURE FILES?
 Feature files are written in plain text and contain scenarios that describe the expected behavior of a particular feature of your application. They typically use a structured format like Gherkin, which is a language for specifying behavior using keywords like "Given," "When," and "Then."
-
-### Step 1: Install a code editor
-#### Visual Studio Code
-Visual Studio Code (VS Code) is a free, open-source code editor developed by Microsoft
-
-1. Visit the official Visual Studio Code website: https://code.visualstudio.com/.
-
-2. On the homepage, click on the "Download" button for your operating system to download the installer.
-
-3. Once the installer is downloaded, follow the installation instructions to install VS Code. You can choose the installation location and whether to add VS Code to your PATH during installation.
-
-4. Once the installation is complete, you can launch Visual Studio Code by finding it in your Start menu or using the desktop shortcut.
-
-#### Pycharm
-PyCharm is a popular integrated development environment (IDE) specifically designed for Python development
-
-1. Visit the JetBrains PyCharm Community page: https://www.jetbrains.com/pycharm/download/
-
-2. On the download page, you'll see an option to download PyCharm Community. Click on the "Download" button for the Community edition.
-
-3. Once the download is complete, run the installer.
-
-4. Follow the installation wizard's instructions to install PyCharm Community. You can typically choose the installation location and whether to create desktop shortcuts during installation.
-
-5. After installation, you can launch PyCharm Community by finding it in your application menu.
 
 ### Step 2: Install Behave
 You can install Behave using Python's package manager, pip. Open your command prompt or terminal and run the following command:
