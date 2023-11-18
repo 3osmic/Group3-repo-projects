@@ -41,6 +41,8 @@ Unit Testing is the process of checking small pieces of code to deliver informat
 2. **Correcting the Code**: 
 3. **Refactor the Code**: 
 
+### Best Practices
+
 ### Step 1: Install Pytest
 You can install pytest using Python's package manager, pip. Open your command prompt or terminal and run the following command:
 
@@ -54,7 +56,13 @@ Once installed, a "Successfully installed" message should be displayed.
 
 Note: If you find that you have problems installing behave on your computer, please navigate to the [FAQ](#faq) section of this document
 
-###  
+###  Step 2 (Do It Yourself - Write a Function to Test)
+
+###  Step 3 (Do It Yourself - Write a Test Function)
+
+###  Step 4 (Do It Yourself - Test Using Exceptions)
+
+###  Step 5 (Do It Yourself - Run the Tests with Pytest)
 
 ## FAQ (Frequently Asked Questions)
  <a id="faq"></a>
