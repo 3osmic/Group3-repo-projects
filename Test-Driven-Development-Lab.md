@@ -1,16 +1,14 @@
 _______________________________________________________________________
 
-	Group 3	BEHAVE LAB	
+	Group 3	Test-Driven Development LAB	
 _______________________________________________________________________
 
 
 ## LAB 03	UNIT TESTING WITH TEST-DRIVEN DEVELOPMENT
 
 ### OBJECTIVES
-- Automate browser actions for web application testing.
-- Understand and utilize Selenium WebDriver using Python.
-- Validate web application UI elements and functionalities.
-- Create a Behave step definitions
+- Understand unit testing using Python.
+- Create pytest functions
 - Provide details on commands commonly used in Behave
 
 ### PREREQUISITES
@@ -20,37 +18,43 @@ _______________________________________________________________________
 ## BEFORE YOU GET STARTED
 You will need the following in order for your tests to perform correctly
 
-- Install a web browser to run the web application
-    - This can be:
-        - Firefox (Recommended)
-        - Chrome
-        - Microsoft Edge
 - Create a GitHub account
   - Clone the GitHub repository
 - Install a code editor
+- Install python
+- Install pytest
 
 Examples of code editors:
 - VS Code
 - Pycharm (Recommended)
 
-### OVERVIEW
-
 For more information on Installations and GitHub: https://github.com/CbarNC/Group3-repo-projects/blob/Selenium/Selenium%20Lab.md
 
-### What Is TDD? (Test-Driven-Development)
-- Test Driven Development (TDD) is a software development practice that focuses on creating unit test cases before developing the actual code
+### OVERVIEW
+Test Driven Development (TDD) is the process of using unit testing to write automated test functions before writing the actual code. To achieve this, TDD uses multiple libraries with different languages, but in the lab, we will be focusing on the pytest library with python. The information below is a step-by-step guide on how to help you get started.
 
 ### What is Unit Testing?
-- Unit Testing is the process of checking small pieces of code to deliver information early and often
+Unit Testing is the process of checking small pieces of code to deliver information early and often
 
-## Three Phases of TDD
+### Three Phases of TDD
 1. **Create precise tests**: 
-2. **Correcting the Code**:
-3. **Refactor the Code**:
+2. **Correcting the Code**: 
+3. **Refactor the Code**: 
 
-## 
+### Step 1: Install Pytest
+You can install pytest using Python's package manager, pip. Open your command prompt or terminal and run the following command:
 
-## 
+`pip install pytest`
+
+![Pytest](img.png)
+
+Once installed, a "Successfully installed" message should be displayed.
+
+- For more information on pytest, visit their website at: https://docs.pytest.org/en/7.1.x/contents.html
+
+Note: If you find that you have problems installing behave on your computer, please navigate to the [FAQ](#faq) section of this document
+
+###  
 
 ## FAQ (Frequently Asked Questions)
  <a id="faq"></a>
