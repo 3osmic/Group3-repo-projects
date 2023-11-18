@@ -63,6 +63,11 @@ Note: If you find that you have problems installing behave on your computer, ple
 ###  Step 4 (Do It Yourself - Test Using Exceptions)
 
 ###  Step 5 (Do It Yourself - Run the Tests with Pytest)
+In order for you to run your pytest's you must be in the terminal of your code editor
+
+The command for running your tests are below:
+
+`pytest test_example.py`
 
 ## FAQ (Frequently Asked Questions)
  <a id="faq"></a>
