@@ -29,6 +29,14 @@ You will need the following in order for your tests to perform correctly
         - Microsoft Edge
 - Create a GitHub account
     - Clone the GitHub repository
+- Install a code editor
+- Install Python
+- Install Selenium
+- Download a Web Driver
+
+Examples of code editors:
+- VS Code
+- Pycharm (Recommended)
 
 ### HOW TO CREATE A GITHUB ACCOUNT
 - Navigate to this page on how to create a GitHub account: https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account
@@ -37,8 +45,32 @@ You will need the following in order for your tests to perform correctly
 - Navigate to this page on how to clone a GitHub repository: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 ### OVERVIEW
 Selenium is a great way to automate web interactions and perform automated browser testing. You can use selenium with multiple languages, but in this lab we will only focus on python. The latest version of selenium is selenium 4. The information below is a step-by-step guide on how to help you get started.
+### Step 1: Install a code editor
+#### Visual Studio Code
+Visual Studio Code (VS Code) is a free, open-source code editor developed by Microsoft
 
-### Step 1: Install Python
+1. Visit the official Visual Studio Code website: https://code.visualstudio.com/.
+
+2. On the homepage, click on the "Download" button for your operating system to download the installer.
+
+3. Once the installer is downloaded, follow the installation instructions to install VS Code. You can choose the installation location and whether to add VS Code to your PATH during installation.
+
+4. Once the installation is complete, you can launch Visual Studio Code by finding it in your Start menu or using the desktop shortcut.
+
+#### Pycharm
+PyCharm is a popular integrated development environment (IDE) specifically designed for Python development
+
+1. Visit the JetBrains PyCharm Community page: https://www.jetbrains.com/pycharm/download/
+
+2. On the download page, you'll see an option to download PyCharm Community. Click on the "Download" button for the Community edition.
+
+3. Once the download is complete, run the installer.
+
+4. Follow the installation wizard's instructions to install PyCharm Community. You can typically choose the installation location and whether to create desktop shortcuts during installation.
+
+5. After installation, you can launch PyCharm Community by finding it in your application menu.
+
+### Step 2: Install Python
 If you have not already, you will need to install Python on your computer. To do so please navigate to Python official website to download the latest version: https://www.python.org/downloads/ 
 
 **Note:** Make sure to download the right file based on your OS, as well as adding Python to your system's PATH during installation.
@@ -51,7 +83,7 @@ If you already have pip installed on your system, you can upgrade it by using th
 
 `pip install -U selenium`
 
-### Step 2: Install Selenium
+### Step 3: Install Selenium
 You can install Selenium using Python's package manager, pip. Open your command prompt or terminal and run the following command:   
 
 `pip install selenium`
@@ -65,7 +97,7 @@ Once installed, a "Successfully installed" message should be displayed.
 
 **Note:** If you find that you have problems installing selenium on your computer, please navigate to the [FAQ](#faq) section of this document
 
-### Step 3: Download a Web Driver
+### Step 4: Download a Web Driver
 Selenium interacts with web browsers using drivers. You will need to download the appropriate driver for the web browser you want to automate. Such as Chrome, Firefox, and Edge.  
 Drivers can be found in the following URL's:	
 
@@ -79,7 +111,7 @@ For more platform options please visit the selenium official website, and scroll
 
 
 Once Selenium is installed, you’re ready to create your first Selenium script!
-### Step 4: Creating Your First Selenium Script 
+### Step 5: Creating Your First Selenium Script 
 Here is a simple Python script that opens a browser, navigates to a website, and performs some action with expected results:
 
 If you wish to use a different web browser, just change the name.
@@ -91,7 +123,7 @@ If you wish to use a different web browser, just change the name.
 
 ![FirstScript](https://github.com/3osmic/Group3-repo-projects/assets/113747615/083e734e-18ca-4787-8228-0384d1085194)
 
-## Step 5: (Do It Yourself) - Basic Selenium Commands
+## Step 6: (Do It Yourself) - Basic Selenium Commands
  <a id="website"></a>
 Website used for these demonstrations: https://cbarnc.github.io/Group3-repo-projects/
 <!-- Click a button -->
