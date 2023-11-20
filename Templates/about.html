@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>About</title>
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
+    <!-- jQuery 3 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Bootstrap 4 JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='images/food-pic.jpg') }}");
+            /* other styles */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="{{ url_for('static', filename='images/team-3-cusine.png') }}" alt="Logo" width="100" height="100">
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">HOME</a></li>
+                    <li><a href="{{ url_for('about') }}" class="current">ABOUT</a></li>
+                    <li><a href="{{ url_for('menu') }}">MENU</a></li>
+                    <li><a href="{{ url_for('signin') }}">SIGN IN</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="accordion1" role="tablist">
+            <div class="card">
+                <div class="card-header" role="tab" id="headingOne1">
+                    <h5 class="mb-0">
+                        <a data-toggle="collapse" href="#collapseOne1" role="button" aria-expanded="false"
+                            aria-controls="collapseOne1">Our Mission</a>
+                    </h5>
+                </div>
+
+                <div id="collapseOne1" class="collapse" role="tabpanel" aria-labelledby="headingOne1"
+                    data-parent="#accordion1">
+                    <div class="card-body">
+                        At Team's Three Cuisine, we are passionate about bringing the authentic flavors of Italy to
+                        your
+                        table.
+                        Our journey began with a shared love for Italian cuisine and a dream to create a dining
+                        experience
+                        that captures the essence of Italy's culinary heritage. Our story begins with a group of
+                        friends, each with their own unique connection to Italy.
+                        Some of us have Italian roots that stretch back generations, while others fell in love with the
+                        cuisine during travels around the world. Inspired by our collective passion,
+                        we decided to create a place where everyone can savor the magic of Italian cooking.
+
+                    </div>
+                </div>
+
+                <video width="900" height="650" controls autoplay loop>
+                    <source src="{{url_for('static', filename='video/new_vid.mov')}}">
+                </video>
+            </div>
+        </div>
+
+
+
+
+        <footer>&copy; 2023 Team Three Cuisine</footer>
+    </div>
+</body>
+
+</html>
