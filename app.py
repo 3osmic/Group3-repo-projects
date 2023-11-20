@@ -108,9 +108,9 @@ def signup():
                 conn.commit()
                 flash('Signup successful', 'success')
                 return redirect(url_for('index'))
-
+                
             conn.close()
-
+    
     return render_template('signup.html', show_flash_message=show_flash_message)
 
 

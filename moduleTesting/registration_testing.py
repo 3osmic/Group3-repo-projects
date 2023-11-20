@@ -1,16 +1,16 @@
 import datetime
 import unittest
-import app.py
+from app import signup
 
 
-class RegistrationTesting(TestCase):
+class RegistrationTesting(unittest.TestCase):
 
     def test_validate_signup(self):
-        form = signUp(
+        form = signup(
             email='new@test.test',
             password='example', confirm_password='example')
         self.assertTrue(form)
 
     def test_validate_password_match(self):
-
+        pass
 
