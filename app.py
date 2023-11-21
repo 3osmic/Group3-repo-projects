@@ -2,28 +2,30 @@ from flask import Flask, render_template, request, redirect, url_for, flash, sen
 
 import sqlite3
 
-
 app = Flask(__name__)
 app.secret_key = "mahsjdshdssdkdd_ncjdjkl"
 
 
 # Database initialization function
-def init_db():
+def db(create_table=False):
     conn = sqlite3.connect('database.db')
     c = conn.cursor()
-    c.execute('''
-        CREATE TABLE IF NOT EXISTS users (
-            id INTEGER PRIMARY KEY,
-            username TEXT NOT NULL,
-            email TEXT NOT NULL,
-            password TEXT NOT NULL
-        )
-    ''')
+
+    if create_table:
+        c.execute('''
+            CREATE TABLE IF NOT EXISTS users (
+                id INTEGER PRIMARY KEY,
+                username TEXT NOT NULL,
+                email TEXT NOT NULL,
+                password TEXT NOT NULL
+            )
+        ''')
+
     conn.commit()
     conn.close()
 
 
-init_db()
+db()
 
 
 # Route for the signin page
@@ -52,6 +54,7 @@ def signin():
 
     return render_template('signin.html', show_flash_message=show_flash_message)
 
+
 # Route for the forgot password page
 
 
@@ -70,6 +73,7 @@ def forgot():
             show_flash_message = True  # Set the flag to True to show the flash message
 
     return render_template('forgot.html', show_flash_message=show_flash_message)
+
 
 # Route for the sign-up page
 
@@ -151,4 +155,5 @@ def get_db_connection():
 
 
 if __name__ == '__main__':
+    db(create_table=True)
     app.run(debug=True)

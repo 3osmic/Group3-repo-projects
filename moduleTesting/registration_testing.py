@@ -1,6 +1,8 @@
 import datetime
 import unittest
-import app.py
+from unittest import TestCase
+
+import app
 
 
 class RegistrationTesting(TestCase):
