@@ -1,4 +1,7 @@
 import unittest
+
+import pytest
+
 from app import app
 import os
 
@@ -38,7 +41,14 @@ class RegistrationTesting(unittest.TestCase):
         # self.assertIn(b'Cuisine Page, response.data')
 
     def test_validate_password_match(self):
-        pass
+        response = self.client.post('/signup', data={
+            'username': 'group3',
+            'password': '12345',
+            'confirm_password': '1234'
+        })
+        # assert response.status_code == 200
+        # html = response.get_data(as_text=True)
+        # assert "Field must be equal to password." in html
 
 
 if __name__ == '__main__':
