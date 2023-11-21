@@ -8,17 +8,20 @@ app.secret_key = "mahsjdshdssdkdd_ncjdjkl"
 
 
 # Database initialization function
-def db():
+def db(create_table=False):
     conn = sqlite3.connect('database.db')
     c = conn.cursor()
-    c.execute('''
-        CREATE TABLE IF NOT EXISTS users (
-            id INTEGER PRIMARY KEY,
-            username TEXT NOT NULL,
-            email TEXT NOT NULL,
-            password TEXT NOT NULL
-        )
-    ''')
+
+    if create_table:
+        c.execute('''
+            CREATE TABLE IF NOT EXISTS users (
+                id INTEGER PRIMARY KEY,
+                username TEXT NOT NULL,
+                email TEXT NOT NULL,
+                password TEXT NOT NULL
+            )
+        ''')
+
     conn.commit()
     conn.close()
 
@@ -151,4 +154,5 @@ def get_db_connection():
 
 
 if __name__ == '__main__':
+    db(create_table=True)
     app.run(debug=True)
