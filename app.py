@@ -8,7 +8,7 @@ app.secret_key = "mahsjdshdssdkdd_ncjdjkl"
 
 
 # Database initialization function
-def init_db():
+def db():
     conn = sqlite3.connect('database.db')
     c = conn.cursor()
     c.execute('''
@@ -23,7 +23,7 @@ def init_db():
     conn.close()
 
 
-init_db()
+db()
 
 
 # Route for the signin page
