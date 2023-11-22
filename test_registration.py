@@ -1,6 +1,7 @@
 import unittest
 from app import app, get_db_connection, db
 
+
 class TestRegistration(unittest.TestCase):
     def setUp(self):
         self.app = app
@@ -17,8 +18,7 @@ class TestRegistration(unittest.TestCase):
         if not table_exists:
             # Create the users table for testing
             db(create_table=True)
-            
-        
+
     def tearDown(self):
         with get_db_connection() as conn:
             cursor = conn.cursor()
@@ -44,14 +44,24 @@ class TestRegistration(unittest.TestCase):
         assert response.request.path == '/index'
         
     def test_validate_password_match(self):
-        response = self.client.post('/signup', data={
-            'username': 'group3',
-            'password': '12345',
-            'confirm_password': '1234'
-        })
-        # assert response.status_code == 200
-        # html = response.get_data(as_text=True)
-        # assert "Field must be equal to password." in html
+        form_data = {
+            'username': b'test_user12345',
+            'email': b'existing@test.test',  # Existing email in the database
+            'password': b'example',
+            'confirm-password': b'exampl',
+        }
+
+        response = self.client.post('/signup', data=form_data, follow_redirects=True)
+
+        print(response.data)
+
+        assert b"Passwords do not match" in response.data
+        assert response.status_code == 200
+        assert response.request.path == '/signup'
+
+
+    def test_user_name_valid(self):
+
 
 
 if __name__ == '__main__':
