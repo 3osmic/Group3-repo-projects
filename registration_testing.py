@@ -1,44 +1,42 @@
 import unittest
-
-import pytest
-
-from app import app
-import os
-
-os.environ['DATABASE_URL'] = 'sqlite://'
+from app import app, get_db_connection, db
 
 
-class RegistrationTesting(unittest.TestCase):
+class TestRegistration(unittest.TestCase):
     def setUp(self):
         self.app = app
+        self.app.config['TESTING'] = True
         self.app.config['SECRET_KEY'] = 'testingdb123'
         self.app_ctxt = self.app.app_context()
         self.app_ctxt.push()
-        # db.create_all()
         self.client = self.app.test_client()
+        with get_db_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='users'")
+            table_exists = cursor.fetchone() is not None
+        if not table_exists:
+            # Create the users table for testing
+            db(create_table=True)
 
     def tearDown(self):
-        # db.drop_all()
+        with get_db_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('DROP TABLE IF EXISTS users')
+            conn.commit()
         self.app_ctxt.pop()
-        self.app = None
-        self.app_ctxt = None
-        self.client = None
 
-    def test_validate_signup(self):
-        self.app.post('/signup', data=dict(
-            username='test_user12345',
-            email='new@test.test',
-            password='example',
-            confirm_password='example',
-        ), follow_redirects=True)
-
-        self.client.get('/index', follow_redirects=True)
-
-        # assert b"Cuisine Page" in response.data
-        # assert response.status_code == 200
-        # assert response.request.path == '/index'
-        # print(response.data)
-        # self.assertIn(b'Cuisine Page, response.data')
+    def test_signup_successful(self):
+        form_data = {
+            'username': b'test_user12345',
+            'email': b'existing@test.test',  # Existing email in the database
+            'password': b'example',
+            'confirm-password': b'example',
+        }
+        response = self.client.post('/signup', data=form_data, follow_redirects=True)
+        print(response.data)
+        assert b"Cuisine Page" in response.data
+        assert response.status_code == 200
+        assert response.request.path == '/index'
 
     def test_validate_password_match(self):
         response = self.client.post('/signup', data={
