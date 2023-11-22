@@ -37,11 +37,9 @@ Test Driven Development (TDD) is the process of using unit testing to write auto
 Unit Testing is the process of checking small pieces of code to deliver information early and often
 
 ### Three Phases of TDD
-1. **Create precise tests**: 
-2. **Correcting the Code**: 
-3. **Refactor the Code**: 
-
-### Best Practices
+1. **Red**: Think about what you want to develop
+2. **Green**: Think about how to make your tests pass
+3. **Refactor**: Think about how to improve your existing implementation
 
 ### Step 1: Install Pytest
 You can install pytest using Python's package manager, pip. Open your command prompt or terminal and run the following command:
@@ -56,13 +54,20 @@ Once installed, a "Successfully installed" message should be displayed.
 
 Note: If you find that you have problems installing behave on your computer, please navigate to the [FAQ](#faq) section of this document
 
-###  Step 2 (Do It Yourself - Write a Function to Test)
+###  Step 2 (RED STAGE)
+The purpose of this phase is to write a test that informs the implementation of a feature.
 
-###  Step 3 (Do It Yourself - Write a Test Function)
+Here is an example of the "in the red" stage:
 
-###  Step 4 (Do It Yourself - Test Using Exceptions)
 
-###  Step 5 (Do It Yourself - Run the Tests with Pytest)
+
+###  Step 3 (GREEN STAGE)
+
+
+###  Step 4 (REFACTOR STAGE)
+
+
+###  Step 4 (Running the Tests)
 In order for you to run your pytest's you must be in the terminal of your code editor
 
 The command for running your tests are below:
