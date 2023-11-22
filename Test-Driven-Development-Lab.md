@@ -58,21 +58,28 @@ Note: If you find that you have problems installing behave on your computer, ple
 The purpose of this phase is to write a test that informs the implementation of a feature.
 
 Here is an example of the "in the red" stage:
-
+![s1](https://raw.githubusercontent.com/CbarNC/Group3-repo-projects/Test-Driven-Development---(TDD)/s1.gif)
 
 
 ###  Step 3 (GREEN STAGE)
+The purpose of this phase is to 
 
+Here is an example of the "in the green" stage:
+![s2](https://raw.githubusercontent.com/CbarNC/Group3-repo-projects/Test-Driven-Development---(TDD)/s2.gif)
 
 ###  Step 4 (REFACTOR STAGE)
+The purpose of this phase is to implement code that make your tests pass.
+
+Here is an example of the "in the green refactor" stage:
+![s3]()
+
+###  Step 5 (Writing a Test File For the Signup Page)
+Here is a breakdown of the registration_testing.py file:
+
+```python
 
 
-###  Step 4 (Running the Tests)
-In order for you to run your pytest's you must be in the terminal of your code editor
-
-The command for running your tests are below:
-
-`pytest test_example.py`
+```
 
 ## FAQ (Frequently Asked Questions)
  <a id="faq"></a>
