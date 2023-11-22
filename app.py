@@ -11,17 +11,15 @@ app.secret_key = "mahsjdshdssdkdd_ncjdjkl"
 def db(create_table=False):
     conn = sqlite3.connect('database.db')
     c = conn.cursor()
-
     if create_table:
         c.execute('''
-            CREATE TABLE IF NOT EXISTS users (
-                id INTEGER PRIMARY KEY,
-                username TEXT NOT NULL,
-                email TEXT NOT NULL,
-                password TEXT NOT NULL
-            )
-        ''')
-
+                CREATE TABLE IF NOT EXISTS users (
+                    id INTEGER PRIMARY KEY,
+                    username TEXT NOT NULL,
+                    email TEXT NOT NULL,
+                    password TEXT NOT NULL
+                )
+            ''')
     conn.commit()
     conn.close()
 
