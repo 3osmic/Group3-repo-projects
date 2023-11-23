@@ -58,7 +58,7 @@ Note: If you find that you have problems installing behave on your computer, ple
 The purpose of this phase is to write a test that informs the implementation of a feature.
 
 Here is an example of the "in the red" stage:
-![s1]()
+![s1](https://github.com/CbarNC/Group3-repo-projects/blob/Test-Driven-Development---(TDD)/s1.gif?raw=true)
 
 ###  Step 3 (GREEN STAGE)
 The purpose of this phase is to 
