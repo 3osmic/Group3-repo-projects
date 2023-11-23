@@ -41,12 +41,12 @@ Unit Testing is the process of checking small pieces of code to deliver informat
 2. **Green**: Think about how to make your tests pass
 3. **Refactor**: Think about how to improve your existing implementation
 
-### Step 1: Install Pytest
-You can install pytest using Python's package manager, pip. Open your command prompt or terminal and run the following command:
+### Step 1: Import Unittest
+You can import the unit testing framework with the following command:
 
-`pip install pytest`
+`import unittest`
 
-![Pytest](img.png)
+![img_1.png](img_1.png)
 
 Once installed, a "Successfully installed" message should be displayed.
 
@@ -162,3 +162,13 @@ if __name__ == '__main__':
 
 ## FAQ (Frequently Asked Questions)
  <a id="faq"></a>
+
+#### Q: Why is testing important for Flask apps?
+- A: It helps the user ensure that their Flask application functions as expected and catches bugs early in the development process
+
+#### Q: How do I set up testing for my Flask app?
+- A: You can use built-in frameworks like `unittest` or libraries like `pytest`
+
+#### Q: What is the purpose of setup and teardown in Flask testing?
+- A:  They help prepare the environment for testing and clean up any resources afterward
+
