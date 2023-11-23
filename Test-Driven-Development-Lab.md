@@ -58,27 +58,27 @@ Note: If you find that you have problems installing behave on your computer, ple
 The purpose of this phase is to write a test that informs the implementation of a feature.
 
 Here is an example of the "in the red" stage:
-![s1](https://raw.githubusercontent.com/CbarNC/Group3-repo-projects/Test-Driven-Development---(TDD)/s1.gif)
-
+![s1]()
 
 ###  Step 3 (GREEN STAGE)
 The purpose of this phase is to 
 
 Here is an example of the "in the green" stage:
-![s2](https://raw.githubusercontent.com/CbarNC/Group3-repo-projects/Test-Driven-Development---(TDD)/s2.gif)
+![s2]()
 
 ###  Step 4 (REFACTOR STAGE)
 The purpose of this phase is to implement your code better or more efficiently.
 
 Here is an example of the "in the green refactor" stage:
-![s3](https://raw.githubusercontent.com/CbarNC/Group3-repo-projects/Test-Driven-Development---(TDD)/s3.gif)
+![s3]()
 
 ###  Step 5 (Writing a Test File For the Signup Page)
-Here is a breakdown of the registration_testing.py file:
+Here is a breakdown of the test_app.py file:
 
 ```python
 import unittest
 from app import app, get_db_connection, db
+
 
 class TestRegistration(unittest.TestCase):
     def setUp(self):
@@ -92,6 +92,7 @@ class TestRegistration(unittest.TestCase):
             cursor = conn.cursor()
             cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='users'")
             table_exists = cursor.fetchone() is not None
+
         if not table_exists:
             # Create the users table for testing
             db(create_table=True)
@@ -101,6 +102,7 @@ class TestRegistration(unittest.TestCase):
             cursor = conn.cursor()
             cursor.execute('DROP TABLE IF EXISTS users')
             conn.commit()
+
         self.app_ctxt.pop()
 
     def test_signup_successful(self):
@@ -110,19 +112,30 @@ class TestRegistration(unittest.TestCase):
             'password': b'example',
             'confirm-password': b'example',
         }
+        
         response = self.client.post('/signup', data=form_data, follow_redirects=True)
+        
         print(response.data)
+        
         assert b"Cuisine Page" in response.data
         assert response.status_code == 200
         assert response.request.path == '/index'
-
+        
     def test_validate_password_match(self):
-        response = self.client.post('/signup', data={
-            'username': 'group3',
-            'password': '12345',
-            'confirm_password': '1234'
-        })
+        form_data = {
+            'username': b'test_user12345',
+            'email': b'existing@test.test',  # Existing email in the database
+            'password': b'example',
+            'confirm-password': b'exampl',
+        }
 
+        response = self.client.post('/signup', data=form_data, follow_redirects=True)
+
+        print(response.data)
+
+        assert b"Passwords do not match" in response.data
+        assert response.status_code == 200
+        assert response.request.path == '/signup'
 
 if __name__ == '__main__':
     unittest.main()
@@ -143,7 +156,7 @@ if __name__ == '__main__':
     - Sends a POST request to the '/signup' endpoint with some form data, simulating a user registration attempt
     - Checks if the response contains the expected content and has the expected status code and path
   - *test_validate_password_match*
-    - Sends a POST request to the '/signup' endpoint with some form data, simulating a password validation attempt
+    - Defines a test case for validating password match during signup
 - *if __name__ == '__main__':*
   - Ensures that if the script is run directly (not imported as a module), the tests are executed
 

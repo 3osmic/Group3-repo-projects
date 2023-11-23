@@ -60,9 +60,5 @@ class TestRegistration(unittest.TestCase):
         assert response.request.path == '/signup'
 
 
-    def test_user_name_valid(self):
-
-
-
 if __name__ == '__main__':
     unittest.main()
