@@ -64,13 +64,13 @@ Here is an example of the "in the red" stage:
 The purpose of this phase is to 
 
 Here is an example of the "in the green" stage:
-![s2]()
+![s2](https://github.com/CbarNC/Group3-repo-projects/blob/Test-Driven-Development---(TDD)/s2.gif?raw=true)
 
 ###  Step 4 (REFACTOR STAGE)
 The purpose of this phase is to implement your code better or more efficiently.
 
 Here is an example of the "in the green refactor" stage:
-![s3]()
+![s3](https://github.com/CbarNC/Group3-repo-projects/blob/Test-Driven-Development---(TDD)/s3.gif?raw=true)
 
 ###  Step 5 (Writing a Test File For the Signup Page)
 Here is a breakdown of the test_app.py file:
