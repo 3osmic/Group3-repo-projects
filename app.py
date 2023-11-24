@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory
-
+import os
 import sqlite3
 
 app = Flask(__name__)
@@ -7,17 +7,31 @@ app.secret_key = "mahsjdshdssdkdd_ncjdjkl"
 
 
 # Database initialization function
+# Database initialization function
 def db(create_table=False):
+    if not os.path.exists('database.db'):
+        open('database.db', 'w').close()
+
     conn = sqlite3.connect('database.db')
     c = conn.cursor()
 
     if create_table:
+        # Create the users table
         c.execute('''
             CREATE TABLE IF NOT EXISTS users (
                 id INTEGER PRIMARY KEY,
                 username TEXT NOT NULL,
                 email TEXT NOT NULL,
                 password TEXT NOT NULL
+            )
+        ''')
+
+        # Create the posts table
+        c.execute('''
+            CREATE TABLE IF NOT EXISTS posts (
+                id INTEGER PRIMARY KEY,
+                title TEXT NOT NULL,
+                content TEXT NOT NULL
             )
         ''')
 
