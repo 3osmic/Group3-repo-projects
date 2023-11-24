@@ -1,40 +1,25 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory
-import os
+
 import sqlite3
+
 
 app = Flask(__name__)
 app.secret_key = "mahsjdshdssdkdd_ncjdjkl"
 
 
 # Database initialization function
-# Database initialization function
 def db(create_table=False):
-    if not os.path.exists('database.db'):
-        open('database.db', 'w').close()
-
     conn = sqlite3.connect('database.db')
     c = conn.cursor()
-
     if create_table:
-        # Create the users table
         c.execute('''
-            CREATE TABLE IF NOT EXISTS users (
-                id INTEGER PRIMARY KEY,
-                username TEXT NOT NULL,
-                email TEXT NOT NULL,
-                password TEXT NOT NULL
-            )
-        ''')
-
-        # Create the posts table
-        c.execute('''
-            CREATE TABLE IF NOT EXISTS posts (
-                id INTEGER PRIMARY KEY,
-                title TEXT NOT NULL,
-                content TEXT NOT NULL
-            )
-        ''')
-
+                CREATE TABLE IF NOT EXISTS users (
+                    id INTEGER PRIMARY KEY,
+                    username TEXT NOT NULL,
+                    email TEXT NOT NULL,
+                    password TEXT NOT NULL
+                )
+            ''')
     conn.commit()
     conn.close()
 
@@ -68,7 +53,6 @@ def signin():
 
     return render_template('signin.html', show_flash_message=show_flash_message)
 
-
 # Route for the forgot password page
 
 
@@ -87,7 +71,6 @@ def forgot():
             show_flash_message = True  # Set the flag to True to show the flash message
 
     return render_template('forgot.html', show_flash_message=show_flash_message)
-
 
 # Route for the sign-up page
 
@@ -126,9 +109,9 @@ def signup():
                 conn.commit()
                 flash('Signup successful', 'success')
                 return redirect(url_for('index'))
-
+                
             conn.close()
-
+    
     return render_template('signup.html', show_flash_message=show_flash_message)
 
 

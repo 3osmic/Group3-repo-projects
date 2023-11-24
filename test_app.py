@@ -34,24 +34,30 @@ class TestRegistration(unittest.TestCase):
             'password': b'example',
             'confirm-password': b'example',
         }
+        
+        response = self.client.post('/signup', data=form_data, follow_redirects=True)
+        
+        print(response.data)
+        
+        assert b"Cuisine Page" in response.data
+        assert response.status_code == 200
+        assert response.request.path == '/index'
+        
+    def test_validate_password_match(self):
+        form_data = {
+            'username': b'test_user12345',
+            'email': b'existing@test.test',  # Existing email in the database
+            'password': b'example',
+            'confirm-password': b'exampl',
+        }
 
         response = self.client.post('/signup', data=form_data, follow_redirects=True)
 
         print(response.data)
 
-        assert b"Cuisine Page" in response.data
+        assert b"Passwords do not match" in response.data
         assert response.status_code == 200
-        assert response.request.path == '/index'
-
-    def test_validate_password_match(self):
-        response = self.client.post('/signup', data={
-            'username': 'group3',
-            'password': '12345',
-            'confirm_password': '1234'
-        })
-        # assert response.status_code == 200
-        # html = response.get_data(as_text=True)
-        # assert "Field must be equal to password." in html
+        assert response.request.path == '/signup'
 
 
 if __name__ == '__main__':

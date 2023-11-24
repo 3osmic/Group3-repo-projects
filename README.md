@@ -33,9 +33,9 @@ Tristan McGregor: Document Writer
 <table>
     <tr>
         <th>Sprint 1 | 23 Sept - 4 Oct</th>
-        <th>Sprint 2</th>
-        <th>Sprint 3</th>
-        <th>Sprint 4</th>
+        <th>Sprint 2 | 5 Oct - 25 Oct</th>
+        <th>Sprint 3 | 18 Nov - 4 Dec</th>
+        <th>Sprint 4 | 29 Nov - 5 Dec</th>
     </tr>
     <tr>
         <td>Intro in MS Teams</td>
