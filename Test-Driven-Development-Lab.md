@@ -172,3 +172,5 @@ if __name__ == '__main__':
 #### Q: What is the purpose of setup and teardown in Flask testing?
 - A:  They help prepare the environment for testing and clean up any resources afterward
 
+#### Q: Why dont print statements show up when running pytests?
+- A: You can add -s to the end of the call to run a pytest statement, and all the print statements will be shown. (EX. pytest test_file.py -s)
