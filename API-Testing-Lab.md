@@ -38,10 +38,10 @@ Examples of code editors:
 
 For more information on Installations and GitHub: https://github.com/CbarNC/Group3-repo-projects/blob/Selenium/Selenium%20Lab.md
 
-
 ### Create a Postman Account
 
 ### Install the `requests` Python Library
+![pip-install-requests]()
 
 ### 
 
