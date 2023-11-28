@@ -41,7 +41,11 @@ For more information on Installations and GitHub: https://github.com/CbarNC/Grou
 ### Create a Postman Account
 
 ### Install the `requests` Python Library
-![pip-install-requests]()
+You can install the `requests` library by using the following command in either the command line or terminal:
+
+`pip install requests`
+
+![pip-install-requests](https://github.com/CbarNC/Group3-repo-projects/blob/API-Testing/pip-install-requests.gif?raw=true)
 
 ### 
 
