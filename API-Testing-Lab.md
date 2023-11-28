@@ -14,7 +14,7 @@ _______________________________________________________________________
 ### PREREQUISITES
 - Must have basic knowledge of software testing
 - Must have a basic level of knowledge of the python programming language
-- Must have a basic level of knowledge of html
+- Must have basic knowledge of APIs
 
 ## BEFORE YOU GET STARTED
 You will need the following in order for your tests to perform correctly
@@ -34,11 +34,20 @@ Examples of code editors:
 - VS Code
 - Pycharm (Recommended)
 
-### OVERVIEW
-
 For more information on Installations and GitHub: https://github.com/CbarNC/Group3-repo-projects/blob/Selenium/Selenium%20Lab.md
 
+### OVERVIEW
+API testing refers to the process of testing the application programming interfaces (APIs) of a software system.
+
+### What Are APIs?
+APIs are sets of rules and protocols that allow different software applications to communicate with each other.
+
 ### Create a Postman Account
+To create a Postman account, first navigate to this website: https://www.postman.com
+
+You can either create an account manually, through Google, or SSO.
+
+![postman-create-account](https://github.com/CbarNC/Group3-repo-projects/blob/API-Testing/postman-create-account.gif?raw=true)
 
 ### Install the `requests` Python Library
 You can install the `requests` library by using the following command in either the command line or terminal:
