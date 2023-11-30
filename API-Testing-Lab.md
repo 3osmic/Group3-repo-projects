@@ -63,9 +63,16 @@ You can install the `requests` library by using the following command in either 
 
 ![pip-install-requests](https://github.com/CbarNC/Group3-repo-projects/blob/API-Testing/pip-install-requests.gif?raw=true)
 
-### 
+### Step 3: The GET Request
 
-### 
+### Step 4: The POST Request
+
+### Step 5: The PUT Request
+
+### Step 6: The DELETE Request
 
 ## FAQ (Frequently Asked Questions)
  <a id="faq"></a>
+ 
+### When I Call APIs, Where Can I Find the Token?
+Below shows you where you can find your API token:
