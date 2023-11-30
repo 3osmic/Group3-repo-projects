@@ -76,3 +76,5 @@ You can install the `requests` library by using the following command in either 
  
 ### When I Call APIs, Where Can I Find the Token?
 Below shows you where you can find your API token:
+
+![api-token](https://github.com/CbarNC/Group3-repo-projects/blob/API-Testing/api-token.gif?raw=true)
