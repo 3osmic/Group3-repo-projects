@@ -102,6 +102,10 @@ Steps:
 Example:
 
 
+https://github.com/CbarNC/Group3-repo-projects/assets/137305186/21a24663-97c0-4a90-be04-badc80903dad
+
+
+
 
 ### Step 6: The PUT Request (Postman Example)
 In order for you to update the user currently in the database, I included this html file that holds the user info:
