@@ -155,6 +155,15 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/68f66136-4e93-46
 
 ### What Do The Different HTTP Methods Mean?
 
+1. **POST**
+   - Create a user
+2. **GET**
+   - Retrieve user or users
+3. **PUT**
+   - Update user data
+4. **DELETE**
+   - Delete a user
+
 ### How Do I Change the HTTP Methods?
 
 ### My Database Is Not Showing My User Data
