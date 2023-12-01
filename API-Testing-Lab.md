@@ -38,7 +38,7 @@ Examples of code editors:
 For more information on Installations and GitHub: https://github.com/CbarNC/Group3-repo-projects/blob/Selenium/Selenium%20Lab.md
 
 ### OVERVIEW
-API testing refers to the process of testing the application programming interfaces (APIs) of a software system. In this lab, you'll harness the simplicity of Postman for manual testing and leverage the versatility of the Python `requests` library for automated scenarios. The information below is a step-by-step guide on how to help you get started.
+API testing refers to the process of testing the application programming interfaces (APIs) of a software system. We will be using the HTTP methods: POST, GET, PUT, and DELETE. In this lab, you'll harness the simplicity of Postman for manual testing and leverage the versatility of the Python `requests` library for automated scenarios. We will only be testing the registration page of our website in these examples. The information below is a step-by-step guide on how to help you get started.
 
 ### What Are APIs?
 APIs are sets of rules and protocols that allow different software applications to communicate with each other.
@@ -151,6 +151,11 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/68f66136-4e93-46
 
 
 
+## REQUESTS Library
+
+### What is the `Requests` library in Python?
+The requests library in Python is a popular and powerful library for making HTTP requests. It simplifies the process of sending HTTP requests and handling responses, making it easier to interact with web services, APIs, and other online resources.
+
 ### Step 8: The POST Request (Requests Library Example)
 Below is a breakdown of the code shown in the example:
 
@@ -195,6 +200,22 @@ def post_request():
 post_request()
 ```
 
+**Import Statements:**
+- `import requests:` The module
+
+**Steps:**
+- Set up a base url to your local host website: `signup_url = 'http://127.0.0.1:5000'`
+- Create a new function to handle the post requests: `def post_request():`
+- Concatenate the endpoint to your signup page for registration: `create_signup = signup_url + '/signup'` 
+- Create signup data that includes the information of your user: `    signup_data = {
+        'username': 'test_user',
+        'email': 'test@email.com',
+        'password': 'example',
+        'confirm-password': 'example',
+    }`
+- Create a response variable that holds the user info and creates it: `response = requests.post(create_signup, data=signup_data)`
+- Make an if/else statement to ensure the code gives off a `200` response, else, it prints out your error code: `if response.status_code == 200:`
+- Call the function: `post_request`
 
 ### Step 9: The GET Request (Requests Library Example)
 Below is a breakdown of the code shown in the example:
@@ -235,6 +256,13 @@ def get_request():
 
 get_request()
 ```
+
+**Steps:**
+- Create a new function to handle the get requests: `def get_request():`
+- Concatenate your user endpoint: `get_user_info = signup_url + '/get_user/test_user'` 
+- Create a response variable that holds the user info and gets it: `response = requests.get(get_user_info)`
+- Make an if/else statement to ensure the code gives off a `200` response, else, it prints out your error code: `if response.status_code == 200:`
+- Call the function: `get_request`
 
 ### Step 10: The PUT Request (Requests Library Example)
 Below is a breakdown of the code shown in the example:
@@ -285,6 +313,18 @@ def put_request():
 
 put_request()
 ```
+
+**Steps:**
+- Create a new function to handle the put requests: `def put_request():`
+- Concatenate your user endpoint: `put_updated_info = signup_url + '/update_user/test_user'` 
+- Create updated data that includes the information of your new user: `updated_data = {
+        'new_username': 'test_user_updated',
+        'new_email': 'testupdated@email.com',
+    }`
+- Create a response variable that holds the new user info and changes it: `response = requests.put(put_updated_info, data=updated_data)`
+- Make an if/else statement to ensure the code gives off a `200` response, else, it prints out your error code: `if response.status_code == 200:`
+- Call the function: `put_request`
+
 ### Step 11: The DELETE Request (Requests Library Example)
 Below is a breakdown of the code shown in the example:
 
@@ -321,6 +361,14 @@ def delete_request():
 delete_request()
 
 ```
+
+**Steps:**
+- Create a new function to handle the delete requests: `def delete_request():`
+- Concatenate your user endpoint: `delete_info = signup_url + '/delete_user/test_user_updated'` 
+- Create a response variable that holds the user info and deletes it: `response = requests.delete(delete_info)`
+- Make an if/else statement to ensure the code gives off a `200` response, else, it prints out your error code: `if response.status_code == 200:`
+- Call the function: `delete_request`
+
 ## FAQ (Frequently Asked Questions)
  <a id="faq"></a>
 
