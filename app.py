@@ -54,8 +54,6 @@ def signin():
 
 
 # Route for the forgot password page
-
-
 @app.route('/forgot', methods=['GET', 'POST'])
 def forgot():
     show_flash_message = False  # Flag to determine if flash message should be displayed
@@ -117,9 +115,6 @@ def signup():
     return render_template('signup.html', show_flash_message=show_flash_message)
 
 
-# ... (other routes and functions remain unchanged)
-
-
 # Route for the index page
 @app.route('/')
 @app.route('/index')
@@ -145,6 +140,44 @@ def about():
 @app.route('/menu')
 def menu():
     return render_template('menu.html')
+
+
+# Route for the admin dashboard
+@app.route('/admin/dashboard')
+def admin_dashboard():
+    conn = get_db_connection()
+    users = conn.execute('SELECT * FROM users').fetchall()
+    conn.close()
+    return render_template('admin_dashboard.html', users=users)
+
+
+# Route for deleting a user based on username
+@app.route('/delete_user/<string:username>', methods=['GET', 'DELETE'])
+def delete_user(username):
+    if request.method == 'DELETE':
+        conn = get_db_connection()
+        cursor = conn.cursor()
+
+        # Check if the user exists
+        cursor.execute('SELECT * FROM users WHERE username = ?', (username,))
+        user = cursor.fetchone()
+
+        if user:
+            # Delete the user from the database
+            cursor.execute('DELETE FROM users WHERE username = ?', (username,))
+            conn.commit()
+            conn.close()
+            flash(f'User {username} deleted successfully', 'success')
+        else:
+            flash(f'User {username} not found', 'error')
+
+        return redirect(url_for('admin_dashboard'))
+    else:
+        # Handle the GET request to render the admin dashboard
+        conn = get_db_connection()
+        users = conn.execute('SELECT * FROM users').fetchall()
+        conn.close()
+        return render_template('admin_dashboard.html', users=users)
 
 
 def get_db_connection():
