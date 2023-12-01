@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory
+from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory, jsonify
 
 import sqlite3
 
@@ -205,6 +205,29 @@ def update_user(username):
             flash(f'User {username} not found', 'error')
 
         return redirect(url_for('admin_dashboard'))
+
+
+# Route for fetching user information based on username
+@app.route('/get_user/<string:username>', methods=['GET'])
+def get_user(username):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    # Check if the user exists
+    cursor.execute('SELECT * FROM users WHERE username = ?', (username,))
+    user = cursor.fetchone()
+    conn.close()
+
+    if user:
+        # Convert the user information to a dictionary and return as JSON
+        user_dict = {
+            'username': user['username'],
+            'email': user['email'],
+            'password' : user['password']
+        }
+        return jsonify(user_dict)
+    else:
+        return jsonify({'error': 'User not found'}), 404
 
 
 def get_db_connection():

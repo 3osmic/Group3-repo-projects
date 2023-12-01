@@ -94,15 +94,12 @@ In order for you to fetch the user currently in the database, I included a new h
 Steps:
 1. Copy the local host website
 2. Paste the link in the `GET` HTTP method url area
-3. Add `/admin/dashboard` to the end of the url
+3. Add `/get_user/(username)` to the end of the url
 4. Click `Send`
 5. You should see a `200` request
-6. Click `Preview` in the columns below
+6. When looking below in the `Body` section of the `Pretty` tab, you should see your user info in a json format
 
 Example:
-
-
-https://github.com/CbarNC/Group3-repo-projects/assets/137305186/37e5e27d-2cb1-4e78-b779-9d9ce52e71d2
 
 
 

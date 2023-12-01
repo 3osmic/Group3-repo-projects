@@ -1,20 +1,21 @@
-
-"""
 import requests
 
 # base url (signup):
-signup_url = 'http://127.0.0.1:5000/signup'
+signup_url = 'http://127.0.0.1:5000'
 
 
+# POST Request
 def post_request():
+    create_signup = signup_url + '/signup'
+
     signup_data = {
-        'username': b'test_user12345',
-        'email': b'existing@test.test',
-        'password': b'example',
-        'confirm-password': b'example',
+        'username': 'test_user',
+        'email': 'test@email.com',
+        'password': 'example',
+        'confirm-password': 'example',
     }
 
-    response = requests.post(signup_url, data=signup_data)
+    response = requests.post(create_signup, data=signup_data)
 
     # Check if the request was successful (status code 200)
     if response.status_code == 200:
@@ -22,13 +23,14 @@ def post_request():
         print("=======================")
 
         # After successful signup, make a GET request to retrieve user information
-        get_user_info()
+        get_request()
     else:
         print('Signup failed. Status code:', response.status_code)
         print('Response content:', response.text)
 
 
-def get_user_info():
+# GET Request
+def get_request():
     # Make a GET request to retrieve user information
     response = requests.get('http://127.0.0.1:5000/signup')
 
@@ -41,7 +43,12 @@ def get_user_info():
         print('Response content:', response.text)
 
 
-# Call the function to make the POST request
-post_request()
+# PUT Request
 
-"""
+
+# DELETE Request
+
+
+# Call the function to make the requests
+post_request()
+get_request()
