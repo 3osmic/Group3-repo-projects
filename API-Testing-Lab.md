@@ -114,10 +114,12 @@ Steps:
 1. Copy the local host website
 2. Paste the link in the `PUT` HTTP method url area
 3. Add `/update_user/(username)` to the end of the url
-4. Click `Send`
-5. You should see a `200` request
-6. Click `Preview` in the columns below to see the new updated input boxes
-7. Go back to your code editor and refresh the database to see your updated username and email info
+4. Change the `form-data` `username`/`email` to `new_username`/`new_email`
+5. Change the name and email to the ones you want to update
+6. Click `Send`
+7. You should see a `200` request
+8. Click `Preview` in the columns below to see the new updated input boxes
+9. Go back to your code editor and refresh the database to see your updated username and email info
 
 Example:
 
