@@ -1,76 +1,20 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
-
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>Sign Up Form</title>
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-image: url("{{ url_for('static', filename='images/food-pic.jpg') }}");
-            /* other styles */
-        }
-    </style>
-    <!--[if lt IE 9]>
-    <![endif]-->
+    <!-- Your head content here -->
 </head>
-
-<body class="sign_page">
-
-    <div class="wrapper">
-        <header>
-
-            <img src="{{ url_for('static', filename='images/team-3-cusine.png') }}" alt="Logo" width="100" height="100">
-            <nav>
-                <ul>
-                    <li><a href="{{ url_for('index') }}">HOME</a></li>
-                    <li><a href="{{ url_for('about') }}">ABOUT</a></li>
-                    <li><a href="{{ url_for('menu') }}">MENU</a></li>
-                    <li><a href="{{ url_for('signin') }}">SIGN IN</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
-    <div class="container">
-        <form class="form" id="CreateAccount" method="post" action="{{ url_for('signup') }}">
-            <h2 class="form__title">Create account</h2>
-
-            {% if show_flash_message %}
-            <div class="form__flash-message form__message form__message--error">
-                {{ get_flashed_messages(with_categories=true) }}
-            </div>
-            {% endif %}
-
-            <div class="form__input-group">
-                <input type="text" name="username" class="form__input" autofocus placeholder="Username">
-                <div class="form__input-error-message"> </div>
-            </div>
-            <div class="form__input-group">
-                <input type="text" id="signUpEmail" name="email" class="form__input" autofocus placeholder="Email">
-                <div class="form__input-error-message"> </div>
-            </div>
-            <div class="form__input-group">
-                <input type="password" name="password" class="form__input" autofocus placeholder="Password">
-                <div class="form__input-error-message"> </div>
-            </div>
-            <div class="form__input-group">
-                <input type="password" name="confirm-password" class="form__input" autofocus
-                    placeholder="Confirm Password">
-                <div class="form__input-error-message"> </div>
-            </div>
-            <button class="form__button" type="submit">Create Account</button>
-            <p class=" form__text">
-                <a class="form__link" href="{{ url_for('signin') }}" id="linkCreateAccount"> Already have an account?
-                    Sign in</a>
-            </p>
-        </form>
-    </div>  
-    <script src="{{ url_for('static', filename='main.js') }}"></script>
+<body>
+    <h1>Admin Dashboard</h1>
+    <ul>
+        {% for user in users %}
+            <li>
+                {{ user.username }}
+                <form action="{{ url_for('delete_user', username=user.username) }}" method="post">
+                    <input type="hidden" name="_method" value="delete">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
 </body>
-
 </html>
