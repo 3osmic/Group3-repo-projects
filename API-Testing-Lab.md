@@ -122,6 +122,10 @@ Steps:
 Example:
 
 
+https://github.com/CbarNC/Group3-repo-projects/assets/137305186/5ae095c8-b255-42db-9dfc-2a2d2815f308
+
+
+
 ### Step 7: The DELETE Request (Postman Example)
 In order for you to delete the user currently in the database, I included this html file that holds the user info:
 
