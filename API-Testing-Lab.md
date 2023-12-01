@@ -145,6 +145,10 @@ Steps:
 Example:
 
 
+https://github.com/CbarNC/Group3-repo-projects/assets/137305186/68f66136-4e93-467a-bfa4-2c30a07346ba
+
+
+
 ## FAQ (Frequently Asked Questions)
  <a id="faq"></a>
 
