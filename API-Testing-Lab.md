@@ -151,6 +151,20 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/68f66136-4e93-46
 
 
 
+### Step 8: The POST Request (Requests Library Example)
+Below is a breakdown of the code shown in the example:
+
+**Example:**
+
+
+**BREAKDOWN:**
+
+### Step 9: The GET Request (Requests Library Example)
+
+### Step 10: The PUT Request (Requests Library Example)
+
+### Step 11: The DELETE Request (Requests Library Example)
+
 ## FAQ (Frequently Asked Questions)
  <a id="faq"></a>
 
