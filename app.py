@@ -223,7 +223,7 @@ def get_user(username):
         user_dict = {
             'username': user['username'],
             'email': user['email'],
-            'password' : user['password']
+            'password': user['password'],
         }
         return jsonify(user_dict)
     else:
