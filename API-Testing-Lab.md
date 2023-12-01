@@ -61,15 +61,15 @@ In order to retrieve the local host link to test the APIs, open up your terminal
 
 - Run the app.py file for flask:
 
-
-
-### Step 3: The GET Request
+![local-host-link](https://github.com/CbarNC/Group3-repo-projects/blob/API-Testing/local-host-link-new.gif?raw=true)
 
 ### Step 4: The POST Request
 
-### Step 5: The PUT Request
+### Step 5: The GET Request
 
-### Step 6: The DELETE Request
+### Step 6: The PUT Request
+
+### Step 7: The DELETE Request
 
 ## FAQ (Frequently Asked Questions)
  <a id="faq"></a>
