@@ -176,3 +176,7 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/efb0525d-d7e3-4a
 Your SQL database may not be showing because you have not installed the SQL extension
 
 Example:
+
+
+https://github.com/CbarNC/Group3-repo-projects/assets/137305186/38a99f43-6ec1-410c-9410-0136f2038aa1
+
