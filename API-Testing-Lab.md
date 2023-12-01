@@ -139,7 +139,7 @@ Steps:
 3. Add `/delete_user/(username)` to the end of the url
 4. Click `Send`
 5. You should see a `200` request
-6. Click `Preview` in the columns below to see the delete button
+6. Click `Preview` in the columns below to see a blank page (without any users)
 7. Go back to your code editor and refresh the database to see your user has been deleted
 
 Example:
