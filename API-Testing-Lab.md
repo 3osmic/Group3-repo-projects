@@ -42,9 +42,7 @@ API testing refers to the process of testing the application programming interfa
 ### What Are APIs?
 APIs are sets of rules and protocols that allow different software applications to communicate with each other.
 
-### 
-
-### Step 2: Create a Postman Account
+### Step 1: Create a Postman Account
 To create a Postman account, first navigate to this website: https://www.postman.com
 
 You can either create an account manually, through Google, or SSO.
@@ -57,6 +55,13 @@ You can install the `requests` library by using the following command in either 
 `pip install requests`
 
 ![pip-install-requests](https://github.com/CbarNC/Group3-repo-projects/blob/API-Testing/pip-install-requests.gif?raw=true)
+
+### Step 3: Retrieve the Local Host Link
+In order to retrieve the local host link to test the APIs, open up your terminal in your code editor. In this example, I am using python's terminal:
+
+- Run the app.py file for flask:
+
+
 
 ### Step 3: The GET Request
 
