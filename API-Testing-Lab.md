@@ -147,10 +147,7 @@ Example:
 
 ## FAQ (Frequently Asked Questions)
  <a id="faq"></a>
- 
-### When I Call APIs, Where Can I Find the Token?
-Below shows you where you can find your API token:
 
-![api-token](https://github.com/CbarNC/Group3-repo-projects/blob/API-Testing/api-token.gif?raw=true)
+### What Do The Different HTTP Methods Mean?
 
 ### How Do I Change the HTTP Methods?
