@@ -180,6 +180,33 @@ def delete_user(username):
         return render_template('admin_dashboard.html', users=users)
 
 
+# Route for updating a user based on username
+@app.route('/update_user/<string:username>', methods=['PUT'])
+def update_user(username):
+    if request.method == 'PUT':
+        new_username = request.form['new_username']
+        new_email = request.form['new_email']
+
+        conn = get_db_connection()
+        cursor = conn.cursor()
+
+        # Check if the user exists
+        cursor.execute('SELECT * FROM users WHERE username = ?', (username,))
+        user = cursor.fetchone()
+
+        if user:
+            # Update the user in the database
+            cursor.execute('UPDATE users SET username=?, email=? WHERE username=?',
+                           (new_username, new_email, username))
+            conn.commit()
+            conn.close()
+            flash(f'User {username} updated successfully', 'success')
+        else:
+            flash(f'User {username} not found', 'error')
+
+        return redirect(url_for('admin_dashboard'))
+
+
 def get_db_connection():
     conn = sqlite3.connect('database.db')
     conn.row_factory = sqlite3.Row

@@ -1,4 +1,3 @@
-<!-- admin_dashboard.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +9,17 @@
         {% for user in users %}
             <li>
                 {{ user.username }}
+                <!-- Update Form -->
+                <form action="{{ url_for('update_user', username=user.username) }}" method="post">
+                    <label for="new_username">New Username:</label>
+                    <input type="text" name="new_username" required>
+
+                    <label for="new_email">New Email:</label>
+                    <input type="email" name="new_email" required>
+
+                    <button type="submit">Update</button>
+                </form>
+                <!-- Delete Form -->
                 <form action="{{ url_for('delete_user', username=user.username) }}" method="post">
                     <input type="hidden" name="_method" value="delete">
                     <button type="submit">Delete</button>
