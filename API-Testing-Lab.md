@@ -80,6 +80,10 @@ Steps:
 
 Example:
 
+https://github.com/CbarNC/Group3-repo-projects/assets/137305186/de252628-89d0-4e1a-a7cf-791a26e9ede0
+
+
+
 
 ### Step 5: The GET Request (Postman Example)
 
