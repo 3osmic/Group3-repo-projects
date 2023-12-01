@@ -164,6 +164,8 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/68f66136-4e93-46
 4. **DELETE**
    - Delete a user
 
-### How Do I Change the HTTP Methods?
+### How Do I Change the HTTP Methods in Postman?
+To change the HTTP methods, you can click the dropdown menu:
+
 
 ### My Database Is Not Showing My User Data
