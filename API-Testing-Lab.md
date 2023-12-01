@@ -86,14 +86,14 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/de252628-89d0-4e
 
 
 ### Step 5: The GET Request (Postman Example)
-In order for you to fetch the users currently in the database, I included a new html file that holds all the user info:
+In order for you to fetch the user currently in the database, I included a new html file that holds all the user info:
 
 `admin_dashboard.html`
 
 Steps:
 1. Copy the local host website
 2. Paste the link in the `GET` HTTP method url area
-3. Add `/admin/dashboard` to the end of the url to go to the `admin_dashboard` page
+3. Add `/admin/dashboard` to the end of the url
 4. Click `Send`
 5. You should see a `200` request
 6. Click `Preview` in the columns below
@@ -106,9 +106,38 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/37e5e27d-2cb1-4e
 
 
 ### Step 6: The PUT Request (Postman Example)
+In order for you to update the user currently in the database, I included this html file that holds the user info:
+
+`admin_dashboard.html`
+
+Steps:
+1. Copy the local host website
+2. Paste the link in the `PUT` HTTP method url area
+3. Add `/update_user/(username)` to the end of the url
+4. Click `Send`
+5. You should see a `200` request
+6. Click `Preview` in the columns below to see the new updated input boxes
+7. Go back to your code editor and refresh the database to see your updated username and email info
+
+Example:
 
 
 ### Step 7: The DELETE Request (Postman Example)
+In order for you to delete the user currently in the database, I included this html file that holds the user info:
+
+`admin_dashboard.html`
+
+Steps:
+1. Copy the local host website
+2. Paste the link in the `DELETE` HTTP method url area
+3. Add `/delete_user/(username)` to the end of the url
+4. Click `Send`
+5. You should see a `200` request
+6. Click `Preview` in the columns below to see the delete button
+7. Go back to your code editor and refresh the database to see your user has been deleted
+
+Example:
+
 
 ## FAQ (Frequently Asked Questions)
  <a id="faq"></a>
