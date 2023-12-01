@@ -42,12 +42,7 @@ API testing refers to the process of testing the application programming interfa
 ### What Are APIs?
 APIs are sets of rules and protocols that allow different software applications to communicate with each other.
 
-### Step 1: Create a REST Account
-To create a REST account, first navigate to this website: https://gorest.co.in
-
-You can either create an account through GitHub, Google or Microsoft.
-
-![rest-account-creation](https://github.com/CbarNC/Group3-repo-projects/blob/API-Testing/rest-account-create.gif?raw=true)
+### 
 
 ### Step 2: Create a Postman Account
 To create a Postman account, first navigate to this website: https://www.postman.com
