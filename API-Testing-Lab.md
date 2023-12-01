@@ -79,7 +79,7 @@ Steps:
 - Refresh the table and you should see your newly created user!
 
 Example:
-https://github.com/CbarNC/Group3-repo-projects/assets/137305186/92650741-a333-4b45-8e0f-c6217edb34f4
+
 
 ### Step 5: The GET Request (Postman Example)
 
