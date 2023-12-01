@@ -28,6 +28,7 @@ You will need the following in order for your tests to perform correctly
   - Clone the GitHub repository
 - Install a code editor
 - Create a Postman account
+- Download Postman desktop
 - Install the python `requests` library
 
 Examples of code editors:
@@ -155,3 +156,5 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/68f66136-4e93-46
 ### What Do The Different HTTP Methods Mean?
 
 ### How Do I Change the HTTP Methods?
+
+### My Database Is Not Showing My User Data
