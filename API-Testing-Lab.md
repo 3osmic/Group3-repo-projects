@@ -157,6 +157,10 @@ Below is a breakdown of the code shown in the example:
 **Example:**
 
 
+https://github.com/CbarNC/Group3-repo-projects/assets/137305186/33779579-18a1-47fc-810d-2943fdd36157
+
+
+
 **BREAKDOWN:**
 ```python
 import requests
@@ -198,6 +202,10 @@ Below is a breakdown of the code shown in the example:
 **Example:**
 
 
+https://github.com/CbarNC/Group3-repo-projects/assets/137305186/b7b7c3a1-382a-40df-98b2-b4c48817641e
+
+
+
 **BREAKDOWN:**
 ```python
 import requests
@@ -232,6 +240,10 @@ get_request()
 Below is a breakdown of the code shown in the example:
 
 **Example:**
+
+
+https://github.com/CbarNC/Group3-repo-projects/assets/137305186/4fb39311-de76-48a7-858e-d2eef31dd589
+
 
 
 **BREAKDOWN:**
@@ -277,6 +289,10 @@ put_request()
 Below is a breakdown of the code shown in the example:
 
 **Example:**
+
+
+https://github.com/CbarNC/Group3-repo-projects/assets/137305186/a4ae58ab-a2f4-4cd7-9edd-ce687f09ba8c
+
 
 
 **BREAKDOWN:**
