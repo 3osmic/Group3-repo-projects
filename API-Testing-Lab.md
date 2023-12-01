@@ -86,6 +86,20 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/de252628-89d0-4e
 
 
 ### Step 5: The GET Request (Postman Example)
+In order for you to fetch the users currently in the database, I included a new html file that holds all the user info:
+
+`admin_dashboard.html`
+
+Steps:
+1. Copy the local host website
+2. Paste the link in the `GET` HTTP method url area
+3. Add `/admin/dashboard` to the end of the url to go to the `admin_dashboard` page
+4. Click `Send`
+5. You should see a `200` request
+6. Click `Preview` in the columns below
+
+Example:
+
 
 ### Step 6: The PUT Request (Postman Example)
 
