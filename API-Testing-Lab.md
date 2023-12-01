@@ -64,6 +64,22 @@ In order to retrieve the local host link to test the APIs, open up your terminal
 ![local-host-link](https://github.com/CbarNC/Group3-repo-projects/blob/API-Testing/local-host-link-new.gif?raw=true)
 
 ### Step 4: The POST Request (Postman Example)
+We will first begin this lab by demonstrating how to test APIs in Postman. 
+
+Steps:
+1. Run your flask file
+2. Take the link we copied earlier for the signup page and paste it in the `POST` HTTP method url area
+3. Click "Body" in one of the columns below
+4. You should see a dropdown for the `form-data` - select it
+5. Fill in the info for the sign-up as you usually would (username, email, password, and confirm password)
+6. Click `Send`
+7. You should see a `200` request
+
+- If you want to check if the user was successfully created, you can by going into your code editor and selecting the `database.db` file
+- Refresh the table and you should see your newly created user!
+
+Example:
+
 
 ### Step 5: The GET Request (Postman Example)
 
@@ -78,3 +94,5 @@ In order to retrieve the local host link to test the APIs, open up your terminal
 Below shows you where you can find your API token:
 
 ![api-token](https://github.com/CbarNC/Group3-repo-projects/blob/API-Testing/api-token.gif?raw=true)
+
+### How Do I Change the HTTP Methods?
