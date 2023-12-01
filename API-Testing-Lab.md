@@ -173,3 +173,6 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/efb0525d-d7e3-4a
 
 
 ### My Database Is Not Showing My User Data
+Your SQL database may not be showing because you have not installed the SQL extension
+
+Example:
