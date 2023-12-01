@@ -4,7 +4,7 @@ _______________________________________________________________________
 _______________________________________________________________________
 
 
-## LAB 04	API Automation with Python Requests Module
+## LAB 04	API Automation with Postman and Python Requests Module
 
 ### OBJECTIVES
 - Understand unit testing using Python.
