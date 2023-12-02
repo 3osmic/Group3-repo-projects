@@ -1,8 +1,7 @@
-from fixtures._fixtures import timeout
-from playwright.sync_api import Playwright, sync_playwright, expect
+from playwright.sync_api import Playwright, sync_playwright
 
 
-def run(playwright: Playwright) -> None:
+def test_input_box(playwright: Playwright) -> None:
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
 
@@ -14,13 +13,13 @@ def run(playwright: Playwright) -> None:
 
     page.locator('id=comments').click(timeout=5000)
 
-    input_data = 'I love this restaurant'
-    page.locator('id=comments').fill(input_data)
+    comment_text = 'I love this restaurant'
+    page.locator('id=comments').fill(comment_text)
 
     context.close()
     browser.close()
 
 
 with sync_playwright() as playwright:
-    run(playwright)
+    test_input_box(playwright)
 
