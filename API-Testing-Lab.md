@@ -7,9 +7,10 @@ _______________________________________________________________________
 ## LAB 04	API Automation with Postman and Python Requests Module
 
 ### OBJECTIVES
-- Understand unit testing using Python.
-- Create pytest functions
-- Provide details on commands commonly used in Behave
+- Understand how to test APIs using Postman.
+- Understand how to test APIs using the Python `requests` library
+- Create functions
+- Provide details on HTTP methods commonly used when testing APIs
 
 ### PREREQUISITES
 - Must have basic knowledge of software testing
