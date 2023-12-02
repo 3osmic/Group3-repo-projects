@@ -142,6 +142,12 @@ with sync_playwright() as playwright:
 
 ```
 
+
+
+https://github.com/CbarNC/Group3-repo-projects/assets/137305186/3c0aa2c1-6c58-4ff7-9c59-67dbb5ae368e
+
+
+
 ### Step 6: Testing the Input Box (Contact Us)
 Below is a breakdown example of the following code in order for you to be able to test your input box.
 
@@ -173,6 +179,12 @@ with sync_playwright() as playwright:
 
 
 ```
+
+
+
+https://github.com/CbarNC/Group3-repo-projects/assets/137305186/50a80837-7fd2-4683-9173-e9ff443fd58a
+
+
 
 ### Step 7: Testing the Radio Button (Contact Us)
 Below is a breakdown example of the following code in order for your you to be able to test your radio button.
@@ -217,6 +229,12 @@ with sync_playwright() as playwright:
     test_radio_button(playwright)
 
 ```
+
+
+
+https://github.com/CbarNC/Group3-repo-projects/assets/137305186/00b1837f-b475-4b1d-a9ee-2bbfed2f36a8
+
+
 
 ## FAQ (Frequently Asked Questions)
  <a id="faq"></a>
