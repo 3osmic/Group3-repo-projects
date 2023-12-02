@@ -40,13 +40,15 @@ Examples of code editors:
 - Pycharm (Recommended)
 
 ### OVERVIEW
+This lab serves as a dedicated environment for developers and testers to experiment with and refine automation scripts using the Playwright framework. It provides a controlled space for testing browser interactions, debugging code, and optimizing scripts for web application automation. The information below is a step-by-step guide on how to help you get started.
 
 For more information on GitHub: https://github.com/CbarNC/Group3-repo-projects/blob/Selenium/Selenium%20Lab.md
 
 
 ### What Is Playwright?
+Playwright is an open-source browser automation library that allows developers to automate interactions with web pages.
 
-For more information on playwright, navigate to this website: 
+For more information on playwright, navigate to this website: https://playwright.dev
 
 ### Step 1: Install Playwright
 To install playwright, type the following command in either your command line or terminal:

@@ -11,7 +11,7 @@ def test_radio_button(playwright: Playwright) -> None:
     # go to Cuisine Home Page
     page.goto("https://cbarnc.github.io/Group3-repo-projects/")
 
-    page.locator('#yes').click() 
+    page.locator('#yes').click()
 
     page.screenshot(path="screenshotYes.png")
 
