@@ -76,12 +76,22 @@ To install pytest-playwright, type the following command in either your command 
 `pip install pytest-playwright`
 
 
+
+
+https://github.com/CbarNC/Group3-repo-projects/assets/137305186/9da6f4ac-efde-4be0-a786-bc71c6b365b4
+
+
+
 ### Step 4: Install New Browsers
 In order for you to install new browsers, you need to enter the following command into the command line or terminal:
 
 `playwright install`
 
 This command installs the latest versions of the three browsers that Playwright supports: Chromium, Firefox, and WebKit.
+
+
+
+https://github.com/CbarNC/Group3-repo-projects/assets/137305186/776fa3e5-7d7c-44ac-93e2-a6644ad2c582
 
 
 
