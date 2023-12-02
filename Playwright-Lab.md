@@ -296,6 +296,10 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/00b1837f-b475-4b
 
 
 
+https://github.com/CbarNC/Group3-repo-projects/assets/137305186/0296594e-3807-4799-80ac-1da4e55b9dc6
+
+
+
 ### Can pytest-playwright be used with different browsers?
 - Simple answer: Yes. 
   - Playwright supports multiple browsers (Chromium, Firefox, WebKit), and pytest-playwright provides integration with these browsers.
