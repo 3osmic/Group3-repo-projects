@@ -17,6 +17,7 @@ _______________________________________________________________________
 - Must have basic knowledge of software testing
 - Must have a basic level of knowledge of the python programming language
 - Must have a basic level of knowledge of html
+- Must have knowledge about how to use locators
 - Must have basic knowledge of javascript
 
 ## BEFORE YOU GET STARTED
@@ -61,6 +62,16 @@ To install pytest, type the following command in either your command line or ter
 To install pytest-playwright, type the following command in either your command line or terminal:
 
 `pip install pytest-playwright`
+
+### Step 4: Install New Browsers
+In order for you to install new browsers, you need to enter the following command into the command line or terminal:
+
+`playwright install`
+
+This command installs the latest versions of the three browsers that Playwright supports: Chromium, Firefox, and WebKit.
+
+
+
 
 ## FAQ (Frequently Asked Questions)
  <a id="faq"></a>
