@@ -290,3 +290,16 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/00b1837f-b475-4b
 
 ## FAQ (Frequently Asked Questions)
  <a id="faq"></a>
+
+### Where can I find my screenshots?
+- You can find all of your screenshots in the `moduleTesting` folder in your repository. 
+
+
+
+### Can pytest-playwright be used with different browsers?
+- Simple answer: Yes. 
+  - Playwright supports multiple browsers (Chromium, Firefox, WebKit), and pytest-playwright provides integration with these browsers.
+
+### Are there any community forums or resources for help with pytest-playwright?
+- Simple answer: Yes.
+  - You can find support and discussions on platforms like GitHub, Stack Overflow, or the official Playwright and Pytest communities.
