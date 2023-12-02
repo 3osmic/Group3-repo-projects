@@ -149,6 +149,25 @@ with sync_playwright() as playwright:
 https://github.com/CbarNC/Group3-repo-projects/assets/137305186/3c0aa2c1-6c58-4ff7-9c59-67dbb5ae368e
 
 
+**Breakdown**
+
+**Import Statements:**
+- `from playwright.sync_api import Playwright, sync_playwright:` The module
+
+**Steps:**
+- Create a new function that takes the Playwright object as an argument: `def test_webpage(playwright: Playwright) -> None:`
+- Launch the Chromium browser: `browser = playwright.chromium.launch(headless=False)`
+- Create a new browser context: `context = browser.new_context() | page = context.new_page()`
+- Open the webpage: `page.goto("https://cbarnc.github.io/Group3-repo-projects/")`
+- Locate an element with the role "link" and the name "about" to navigate to the about page: `page.get_by_role("link", name="about").click()`
+- Capture a screenshot of the current page: `page.screenshot(path="screenshotAbout.png")`
+- Create a timeout of 2000 milliseconds: `page.wait_for_timeout(2000)`
+- Navigate to the menu page: `page.get_by_role("link", name="menu").click()`
+- Capture a screenshot of the current page: `page.screenshot(path="screenshotMenu.png")`
+- Navigate to the signin page: `page.get_by_text('SIGN IN').click()`
+- Capture a screenshot of the current page: `page.screenshot(path='screenshotSignin.png')`
+- Close the content and browser: `context.close() | browser.close()`
+- Use the `sync_playwright()` content manager to run the function: `with sync_playwright() as playwright: test_webpage(playwright)`
 
 ### Step 6: Testing the Input Box (Contact Us)
 Below is a breakdown example of the following code in order for you to be able to test your input box.
@@ -187,6 +206,19 @@ with sync_playwright() as playwright:
 https://github.com/CbarNC/Group3-repo-projects/assets/137305186/50a80837-7fd2-4683-9173-e9ff443fd58a
 
 
+
+**Breakdown**
+
+**Steps:**
+- Import playwright libraries: `from playwright.sync_api import Playwright, sync_playwright`
+- Create a new function that takes the Playwright object as an argument: `def test_webpage(playwright: Playwright) -> None:`
+- Launch the Chromium browser: `browser = playwright.chromium.launch(headless=False)`
+- Create a new browser context: `context = browser.new_context() | page = context.new_page()`
+- Open the webpage: `page.goto("https://cbarnc.github.io/Group3-repo-projects/")`
+- Locate and click the input box: `page.locator('id=comments').click(timeout=5000)`
+- Fill in the input box with text: `comment_text = 'I love this restaurant' | page.locator('id=comments').fill(comment_text)`
+- Close the content and browser: `context.close() | browser.close()`
+- Use the `sync_playwright()` content manager to run the function: `with sync_playwright() as playwright: test_webpage(playwright)`
 
 ### Step 7: Testing the Radio Button (Contact Us)
 Below is a breakdown example of the following code in order for your you to be able to test your radio button.
@@ -237,6 +269,24 @@ with sync_playwright() as playwright:
 https://github.com/CbarNC/Group3-repo-projects/assets/137305186/00b1837f-b475-4b1d-a9ee-2bbfed2f36a8
 
 
+
+**Breakdown**
+
+**Steps:**
+- Import playwright libraries: `from playwright.sync_api import Playwright, sync_playwright`
+- Create a new function that takes the Playwright object as an argument: `def test_radio_button(playwright: Playwright) -> None:`
+- Launch the Chromium browser: `browser = playwright.chromium.launch(headless=False)`
+- Create a new browser context: `context = browser.new_context() | page = context.new_page()`
+- Open the webpage: `page.goto("https://cbarnc.github.io/Group3-repo-projects/")`
+- Click on the "yes" radio button: `page.locator('#yes').click()`
+- Capture a screenshot of the current selection: `page.screenshot(path="screenshotYes.png")`
+- Create a timeout of 2000 milliseconds: `page.wait_for_timeout(2000)`
+- Change the radio button to "no": `page.locator('#no').click(timeout=5000)`
+- Create a timeout of 2000 milliseconds: `page.wait_for_timeout(2000)`
+- Capture a screenshot of the current selection: `page.screenshot(path="screenshotNo.png")`
+- Create a timeout of 500 milliseconds: `page.wait_for_timeout(500)`
+- Close the content and browser: `context.close() | browser.close()`
+- Use the `sync_playwright()` content manager to run the function: `with sync_playwright() as playwright: test_webpage(playwright)`
 
 ## FAQ (Frequently Asked Questions)
  <a id="faq"></a>
