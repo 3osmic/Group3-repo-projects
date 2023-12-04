@@ -15,6 +15,7 @@ _______________________________________________________________________
 
 ### PREREQUISITES
 - Must have basic knowledge of software testing
+- Must have knowledge on how to use locators
 - Must have a basic level of knowledge of the python programming language
 - Must have a basic level of knowledge of html
 
