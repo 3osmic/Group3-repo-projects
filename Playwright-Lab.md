@@ -306,3 +306,7 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/0296594e-3807-47
 ### Are there any community forums or resources for help with pytest-playwright?
 - Simple answer: Yes.
   - You can find support and discussions on platforms like GitHub, Stack Overflow, or the official Playwright and Pytest communities.
+
+### ### Is "playwright install" not working for you when installing new browsers?
+    Another command that can be used is "python -m playwright install"
+
