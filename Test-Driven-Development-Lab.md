@@ -1,6 +1,6 @@
 _______________________________________________________________________
 
-	Group 3	Test-Driven Development LAB	
+	Group 3	TEST-DRIVEN DEVELOPMENT LAB	
 _______________________________________________________________________
 
 
@@ -72,7 +72,7 @@ The purpose of this phase is to implement your code better or more efficiently.
 Here is an example of the "in the green refactor" stage:
 ![s3](https://github.com/CbarNC/Group3-repo-projects/blob/Test-Driven-Development---(TDD)/s3.gif?raw=true)
 
-###  Step 5 (Writing a Test File For the Signup Page)
+###  Step 5 (Do It Yourself - Writing a Test File For the Signup Page)
 Here is a breakdown of the test_app.py file:
 
 ```python
