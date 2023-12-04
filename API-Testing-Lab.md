@@ -393,6 +393,8 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/efb0525d-d7e3-4a
 
 
 ### My Database Is Not Showing My User Data
+
+#### Method 1: Install SQL Extension
 Your SQL database may not be showing because you have not installed the SQL extension
 
 Example:
@@ -400,3 +402,11 @@ Example:
 
 https://github.com/CbarNC/Group3-repo-projects/assets/137305186/38a99f43-6ec1-410c-9410-0136f2038aa1
 
+
+#### Method 2: Update Pycharm Version
+Another reason your database may not be showing is that your pycharm might be outdated.
+
+You can download the most recent update of the code editor [here](https://www.jetbrains.com/pycharm/download/?section=windows).
+
+Scroll down and you should see a version of pycharm community:
+![image](https://github.com/CbarNC/Group3-repo-projects/assets/137305186/6e27d417-ea62-4299-a1c7-7adf717c0ff0)
