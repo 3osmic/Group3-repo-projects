@@ -46,7 +46,7 @@ You can import the unit testing framework with the following command:
 
 `import unittest`
 
-![img_1.png](img_1.png)
+![img_1.png](ImagesTesting/img_1.png)
 
 Once installed, a "Successfully installed" message should be displayed.
 
