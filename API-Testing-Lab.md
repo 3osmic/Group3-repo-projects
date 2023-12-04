@@ -65,7 +65,7 @@ In order to retrieve the local host link to test the APIs, open up your terminal
 
 ![local-host-link](https://github.com/CbarNC/Group3-repo-projects/blob/API-Testing/local-host-link-new.gif?raw=true)
 
-### Step 4: The POST Request (Postman Example)
+### Step 4: (Do It Yourself - The POST Request (Postman Example))
 We will first begin this lab by demonstrating how to test APIs in Postman. 
 
 Steps:
@@ -87,7 +87,7 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/de252628-89d0-4e
 
 
 
-### Step 5: The GET Request (Postman Example)
+### Step 5: (Do It Yourself - The GET Request (Postman Example))
 In order for you to fetch the user currently in the database, I included a new html file that holds all the user info:
 
 `admin_dashboard.html`
@@ -108,7 +108,7 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/21a24663-97c0-4a
 
 
 
-### Step 6: The PUT Request (Postman Example)
+### Step 6: (Do It Yourself - The PUT Request (Postman Example))
 In order for you to update the user currently in the database, I included this html file that holds the user info:
 
 `admin_dashboard.html`
@@ -131,7 +131,7 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/5ae095c8-b255-42
 
 
 
-### Step 7: The DELETE Request (Postman Example)
+### Step 7: (Do It Yourself - The DELETE Request (Postman Example))
 In order for you to delete the user currently in the database, I included this html file that holds the user info:
 
 `admin_dashboard.html`
@@ -157,7 +157,7 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/68f66136-4e93-46
 ### What is the `Requests` library in Python?
 The requests library in Python is a popular and powerful library for making HTTP requests. It simplifies the process of sending HTTP requests and handling responses, making it easier to interact with web services, APIs, and other online resources.
 
-### Step 8: The POST Request (Requests Library Example)
+### Step 8: (Do It Yourself - The POST Request (Requests Library Example))
 Below is a breakdown of the code shown in the example:
 
 **Example:**
@@ -218,7 +218,7 @@ post_request()
 - Make an if/else statement to ensure the code gives off a `200` response, else, it prints out your error code: `if response.status_code == 200:`
 - Call the function: `post_request`
 
-### Step 9: The GET Request (Requests Library Example)
+### Step 9: (Do It Yourself - The GET Request (Requests Library Example))
 Below is a breakdown of the code shown in the example:
 
 **Example:**
@@ -265,7 +265,7 @@ get_request()
 - Make an if/else statement to ensure the code gives off a `200` response, else, it prints out your error code: `if response.status_code == 200:`
 - Call the function: `get_request`
 
-### Step 10: The PUT Request (Requests Library Example)
+### Step 10: (Do It Yourself - The PUT Request (Requests Library Example))
 Below is a breakdown of the code shown in the example:
 
 **Example:**
@@ -326,7 +326,7 @@ put_request()
 - Make an if/else statement to ensure the code gives off a `200` response, else, it prints out your error code: `if response.status_code == 200:`
 - Call the function: `put_request`
 
-### Step 11: The DELETE Request (Requests Library Example)
+### Step 11: (Do It Yourself - The DELETE Request (Requests Library Example))
 Below is a breakdown of the code shown in the example:
 
 **Example:**
