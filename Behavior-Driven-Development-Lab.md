@@ -55,7 +55,7 @@ You can install Behave using Python's package manager, pip. Open your command pr
 
 `pip install behave`
 
-![installBehave](img.png)
+![installBehave](ImagesTesting/img.png)
 
 Once installed, a "Successfully installed" message should be displayed.
 
@@ -131,6 +131,7 @@ Feature: Radio Button
 - In order for us to implement our feature files for automated testing, we have to create step definitions with the behave and selenium libraries in python
 
 ### Scenario 1 (Test Registration)
+
 ```Python
 from behave import *
 from selenium import webdriver
@@ -141,38 +142,38 @@ from PIL import Image
 
 @given('the user is on the registration page')
 def user_on_registration(context):
-    context.driver = webdriver.Chrome()
-    context.driver.maximize_window()
-    context.driver.get('https://cbarnc.github.io/Group3-repo-projects/signIn.html')
-    create_account_link = context.driver.find_element(By.ID, "linkCreateAccount")
-    create_account_link.click()
-    time.sleep(5)
+  context.driver = webdriver.Chrome()
+  context.driver.maximize_window()
+  context.driver.get('https://cbarnc.github.io/Group3-repo-projects/signIn.html')
+  create_account_link = context.driver.find_element(By.ID, "linkCreateAccount")
+  create_account_link.click()
+  time.sleep(5)
 
 
 @when('the user fills in their information')
 def user_fills_information(context):
-    context.driver.find_element(By.ID, "signupUsername").send_keys("test_user123")
-    time.sleep(2)
-    context.driver.find_element(By.ID, "signupEmailaddress").send_keys("johndoe@example.com")
-    time.sleep(2)
-    context.driver.find_element(By.ID, "signupPassword").send_keys("password123")
-    time.sleep(2)
-    context.driver.find_element(By.ID, "signupConfirmPassword").send_keys("password123")
-    time.sleep(2)
-    screenshot = Image.open("screenshot1.png")
-    screenshot.show()
+  context.driver.find_element(By.ID, "signupUsername").send_keys("test_user123")
+  time.sleep(2)
+  context.driver.find_element(By.ID, "signupEmailaddress").send_keys("johndoe@example.com")
+  time.sleep(2)
+  context.driver.find_element(By.ID, "signupPassword").send_keys("password123")
+  time.sleep(2)
+  context.driver.find_element(By.ID, "signupConfirmPassword").send_keys("password123")
+  time.sleep(2)
+  screenshot = Image.open("BrowserScreenshots/screenshot1.png")
+  screenshot.show()
 
 
 @when('clicks the "Register" button')
 def click_register(context):
-    submit_confirm = context.driver.find_element(By.ID, "signupSubmit")
-    submit_confirm.click()
-    time.sleep(5)
+  submit_confirm = context.driver.find_element(By.ID, "signupSubmit")
+  submit_confirm.click()
+  time.sleep(5)
 
 
 @then('the user should be logged in')
 def redirect(context):
-    context.driver.get("https://cbarnc.github.io/Group3-repo-projects/")
+  context.driver.get("https://cbarnc.github.io/Group3-repo-projects/")
 
 ```
 ### BREAKDOWN 1 -
@@ -216,33 +217,33 @@ from PIL import Image
 
 @given('the user is on the login page')
 def login_page(context):
-    context.driver = webdriver.Chrome()
-    context.driver.maximize_window()
-    context.driver.get("https://cbarnc.github.io/Group3-repo-projects/signIn.html")
+  context.driver = webdriver.Chrome()
+  context.driver.maximize_window()
+  context.driver.get("https://cbarnc.github.io/Group3-repo-projects/signIn.html")
 
 
 @when('they enter valid username and password')
 def user_pass(context):
-    ui = "test_user123"
-    pi = "password123"
-    context.driver.find_element(By.ID, 'login-username').send_keys(ui)
-    time.sleep(2)
-    context.driver.find_element(By.ID, 'login-password').send_keys(pi)
-    time.sleep(2)
-    screenshot = Image.open("screenshot2.png")
-    screenshot.show()
+  ui = "test_user123"
+  pi = "password123"
+  context.driver.find_element(By.ID, 'login-username').send_keys(ui)
+  time.sleep(2)
+  context.driver.find_element(By.ID, 'login-password').send_keys(pi)
+  time.sleep(2)
+  screenshot = Image.open("BrowserScreenshots/screenshot2.png")
+  screenshot.show()
 
 
 @when('click the "Login" button')
 def click_login(context):
-    login_button = context.driver.find_element(By.ID, 'login-submit')
-    login_button.click()
-    time.sleep(5)
+  login_button = context.driver.find_element(By.ID, 'login-submit')
+  login_button.click()
+  time.sleep(5)
 
 
 @then('they should be redirected to the dashboard')
 def redirect(context):
-    context.driver.get("https://cbarnc.github.io/Group3-repo-projects/")
+  context.driver.get("https://cbarnc.github.io/Group3-repo-projects/")
 
 ```
 ### BREAKDOWN 2 -
@@ -263,6 +264,7 @@ def redirect(context):
     - It navigates to the homepage using `context.driver.get`
 
 ### Scenario 3 (Test Menu Display)
+
 ```Python
 import time
 from behave import *
@@ -273,30 +275,30 @@ from PIL import Image
 
 @given('the user is on the restaurant\'s homepage')
 def home_page(context):
-    context.driver = webdriver.Chrome()
-    context.driver.maximize_window()
-    context.driver.get("https://cbarnc.github.io/Group3-repo-projects/")
+  context.driver = webdriver.Chrome()
+  context.driver.maximize_window()
+  context.driver.get("https://cbarnc.github.io/Group3-repo-projects/")
 
 
 @when('they click on the "Menu" section')
 def open_menu(context):
-    menu_button = context.driver.find_element(By.LINK_TEXT, 'MENU')
-    menu_button.click()
-    time.sleep(2)
+  menu_button = context.driver.find_element(By.LINK_TEXT, 'MENU')
+  menu_button.click()
+  time.sleep(2)
 
 
 @then('they should see a list of dishes and their prices')
 def menu_list(context):
-    menu_elements = context.driver.find_elements(By.CLASS_NAME, 'menu')
-    assert len(menu_elements) > 0, "No 'menu' elements found on the page"
-    time.sleep(2)
-    screenshot = Image.open("screenshot3.png")
-    screenshot.show()
+  menu_elements = context.driver.find_elements(By.CLASS_NAME, 'menu')
+  assert len(menu_elements) > 0, "No 'menu' elements found on the page"
+  time.sleep(2)
+  screenshot = Image.open("BrowserScreenshots/screenshot3.png")
+  screenshot.show()
 
 
 @then('close browser')
 def close_browser(context):
-    context.driver.close()
+  context.driver.close()
 
 ```
 ### BREAKDOWN 3 -
@@ -317,6 +319,7 @@ def close_browser(context):
     - It closes the browser using `context.driver.close()`
 
 ### Scenario 4 (Text Area | Contact US)
+
 ```Python
 import time
 from Screenshot import *
@@ -328,34 +331,34 @@ from PIL import Image
 
 @given('The comments box is empty')
 def empty_comments(context):
-    context.driver = webdriver.Chrome()
-    context.driver.maximize_window()
-    context.driver.get('https://cbarnc.github.io/Group3-repo-projects/')
-    assert context.driver.find_element(By.ID, 'comments').text == ''
-    # takes a screenshot of the empty text area before user writes
-    ob = Screenshot.Screenshot()
-    img_url = ob.full_screenshot(context.driver, save_path=r'.', image_name='myimage2.png', is_load_at_runtime=True,
-                                 load_wait_time=0)
-    screenshot = Image.open(img_url)
-    screenshot.show()
+  context.driver = webdriver.Chrome()
+  context.driver.maximize_window()
+  context.driver.get('https://cbarnc.github.io/Group3-repo-projects/')
+  assert context.driver.find_element(By.ID, 'comments').text == ''
+  # takes a screenshot of the empty text area before user writes
+  ob = Screenshot.Screenshot()
+  img_url = ob.full_screenshot(context.driver, save_path=r'.', image_name='myimage2.png', is_load_at_runtime=True,
+                               load_wait_time=0)
+  screenshot = Image.open(img_url)
+  screenshot.show()
 
 
 @when(u'The user selects the input box and types a message')
 def test_message(context):
-    sendMessage = "This is a Test Message"
-    context.driver.find_element(By.ID, 'comments').send_keys(sendMessage)
-    time.sleep(3)
-    ob = Screenshot.Screenshot()
-    img_url2 = ob.full_screenshot(context.driver, save_path=r'.', image_name='myimage.png', is_load_at_runtime=True,
-                                  load_wait_time=0)
-    print(img_url2)
+  sendMessage = "This is a Test Message"
+  context.driver.find_element(By.ID, 'comments').send_keys(sendMessage)
+  time.sleep(3)
+  ob = Screenshot.Screenshot()
+  img_url2 = ob.full_screenshot(context.driver, save_path=r'.', image_name='myimage.png', is_load_at_runtime=True,
+                                load_wait_time=0)
+  print(img_url2)
 
 
 # takes a screenshot of message user wrote
 @then(u'The comment box is filled')
 def message_status(context):
-    screenshot = Image.open("myimage.png")
-    screenshot.show()
+  screenshot = Image.open("BrowserScreenshots/myimage.png")
+  screenshot.show()
 
 ```
 
@@ -374,6 +377,7 @@ def message_status(context):
     - This is a visual check to confirm that the comments box is filled as expected
 
 ### Scenario 5 ( Radio Button | Contact Us)
+
 ```Python
 from behave import *
 from selenium import webdriver
@@ -384,26 +388,26 @@ from PIL import Image
 
 @given('user on contact us section')
 def contact_us(context):
-    context.driver = webdriver.Chrome()
-    context.driver.maximize_window()
-    context.driver.get('https://cbarnc.github.io/Group3-repo-projects/')
+  context.driver = webdriver.Chrome()
+  context.driver.maximize_window()
+  context.driver.get('https://cbarnc.github.io/Group3-repo-projects/')
 
 
 @when('the selects the Yes Radio button')
 def select_button(context):
-    radio_list = context.driver.find_elements(By.NAME, "T3C_member")
-    for radioButton in radio_list:
-        radioButton_t = radioButton.get_attribute("value")
-        if radioButton_t == "yes":
-            radioButton.click()
-            time.sleep(2)
+  radio_list = context.driver.find_elements(By.NAME, "T3C_member")
+  for radioButton in radio_list:
+    radioButton_t = radioButton.get_attribute("value")
+    if radioButton_t == "yes":
+      radioButton.click()
+      time.sleep(2)
 
 
 @then('the user should see radio button yes selected')
 def radio_status(context):
-    context.driver.get("https://cbarnc.github.io/Group3-repo-projects/")
-    screenshot = Image.open("screenshot-2.png")
-    screenshot.show()
+  context.driver.get("https://cbarnc.github.io/Group3-repo-projects/")
+  screenshot = Image.open("BrowserScreenshots/screenshot-2.png")
+  screenshot.show()
 
 ```
 
@@ -434,20 +438,20 @@ The command for running your tests are below:
 ## Feature File Screenshots
 
 ### Registration
-![Registration](img_4.png)
+![Registration](ImagesTesting/img_4.png)
 
 ### Login
-![Login](img_5.png)
+![Login](ImagesTesting/img_5.png)
 
 ### Menu Display
-![Menu-Display](img_6.png)
+![Menu-Display](ImagesTesting/img_6.png)
 
 ### Text-Area (Contact Us)
-![Text-Area-1](img_2.png)
-![Text-Area-2](img_1.png)
+![Text-Area-1](ImagesTesting/img_2.png)
+![Text-Area-2](ImagesTesting/img_1.png)
 
 ### Radio-Button (Contact Us)
-![Radio-Button](img_3.png)
+![Radio-Button](ImagesTesting/img_3.png)
 
 ## FAQ (Frequently Asked Questions)
  <a id="faq"></a>
@@ -474,9 +478,9 @@ The command for running your tests are below:
 
 Step 1:
 - Right-click on the top of your repository and click "Open In > Explorer"
-![Explorer](img_7.png)
+![Explorer](ImagesTesting/img_7.png)
 
 - Click into the folder of your repository and navigate to where you saved your `.feature` files
 
 **Example:**
-![Terminal](img_8.png)
+![Terminal](ImagesTesting/img_8.png)
