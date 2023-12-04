@@ -1,4 +1,2 @@
-How to host website using Github: http://www.youtube.com/watch?v=HboEGef55sA
-
-
-Link to Web Application being hosted on Github: https://cbarnc.github.io/Group3-repo-projects/
+# Overview
+You are now in the Selenium branch lab! [Click me to start!](https://github.com/CbarNC/Group3-repo-projects/blob/Selenium/Selenium%20Lab.md)
