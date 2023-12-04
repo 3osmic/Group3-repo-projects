@@ -159,7 +159,7 @@ driver.find_element(By.XPATH, "/html/body/div/aside/section[2]/form/fieldset/but
 1. Run the script
 2. See the surprise message that pops up!
 
-![popupMessage](img_5.png)
+![popupMessage](ImagesTesting/img_5.png)
 
 In the event you need to find the XPATH of the button:
 - Go to our website [(listed above)](#website)
@@ -216,7 +216,7 @@ print(p.text)
 1. Run the script
 2. Look at the compiler to see the headings and paragraph text
 
-![compilerHeadingParagraph](img_6.png)
+![compilerHeadingParagraph](ImagesTesting/img_6.png)
 
 In the event you need to find the tag name:
 - Go to our website [(listed above)](#website)
@@ -255,7 +255,7 @@ comments.send_keys("This is a comment I made!")
 1. Run the script
 2. Look at the comment text box area to see your message!
 
-![commentMessage](img_7.png)
+![commentMessage](ImagesTesting/img_7.png)
 
 In the event you need to find the id of the comment section:
 - Go to our website [(listed above)](#website)
@@ -331,7 +331,7 @@ driver.quit()
 1. Run the script
 2. See the browser open into a new tab and close afterwards!
 
-![newTab](img_8.png)
+![newTab](ImagesTesting/img_8.png)
 
 ### COMMAND 5 - Close the Web Driver Browser
 This is an easier command and can be done below:
@@ -370,7 +370,7 @@ driver.quit()
  <a id="faq"></a>
 #### Question 1 : My command line is displaying this error message:
 
-![pipError1](img.png)
+![pipError1](ImagesTesting/img.png)
 #### This error message is most likely due to:
 - Your environment not having the correct path to your python folder/scripts.
 - Your pip version not being in your "scripts" folder.
@@ -379,11 +379,11 @@ driver.quit()
 #### Method 1 (Copy the path into your environment)
 - First type in `python` into your windows search bar (there should be a version of python already installed onto your computer)
 
-![pythonSearch](img_2.png)
+![pythonSearch](ImagesTesting/img_2.png)
 
 - Right-click the version displayed and select `open file location` or click it on the right side of the panel
 
-![fileLocation](img_3.png)
+![fileLocation](ImagesTesting/img_3.png)
 
 - Right-click on your python version once more and select `open file location`
 
@@ -391,7 +391,7 @@ driver.quit()
 - Navigate to the python website: https://www.python.org/downloads/
 
 - Download and install one of the following python versions:
-![pythonDownloads](img_4.png)
+![pythonDownloads](ImagesTesting/img_4.png)
 
 - Once everything has installed, try to enter the following pip command in either the command line or terminal.
 `pip install selenium`
