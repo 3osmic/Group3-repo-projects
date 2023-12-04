@@ -9,7 +9,7 @@ app.secret_key = "mahsjdshdssdkdd_ncjdjkl"
 
 # Database initialization function
 def db(create_table=False):
-    conn = sqlite3.connect('database.db')
+    conn = sqlite3.connect('TestDrivenTesting/database.db')
     c = conn.cursor()
     if create_table:
         c.execute('''
@@ -146,7 +146,7 @@ def menu():
 
 
 def get_db_connection():
-    conn = sqlite3.connect('database.db')
+    conn = sqlite3.connect('TestDrivenTesting/database.db')
     conn.row_factory = sqlite3.Row
     return conn
 
