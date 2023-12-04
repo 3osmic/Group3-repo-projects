@@ -49,21 +49,21 @@ To create a Postman account, first navigate to this website: https://www.postman
 
 You can either create an account manually, through Google, or SSO.
 
-![postman-create-account](https://github.com/CbarNC/Group3-repo-projects/blob/API-Testing/postman-create-account.gif?raw=true)
+![postman-create-account](https://github.com/CbarNC/Group3-repo-projects/blob/API-Testing/ImagesTesting/postman-create-account.gif?raw=true)
 
 ### Step 2: Install the `requests` Python Library
 You can install the `requests` library by using the following command in either the command line or terminal:
 
 `pip install requests`
 
-![pip-install-requests](https://github.com/CbarNC/Group3-repo-projects/blob/API-Testing/pip-install-requests.gif?raw=true)
+![pip-install-requests](https://github.com/CbarNC/Group3-repo-projects/blob/API-Testing/ImagesTesting/pip-install-requests.gif?raw=true)
 
 ### Step 3: Retrieve the Local Host Link
 In order to retrieve the local host link to test the APIs, open up your terminal in your code editor. In this example, I am using python's terminal:
 
 - Run the app.py file for flask:
 
-![local-host-link](https://github.com/CbarNC/Group3-repo-projects/blob/API-Testing/local-host-link-new.gif?raw=true)
+![local-host-link](https://github.com/CbarNC/Group3-repo-projects/blob/API-Testing/ImagesTesting/local-host-link-new.gif?raw=true)
 
 ### Step 4: (Do It Yourself - The POST Request (Postman Example))
 We will first begin this lab by demonstrating how to test APIs in Postman. 
