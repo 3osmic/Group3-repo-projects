@@ -50,7 +50,7 @@ Gherkin is a plain-text, domain-specific language used to describe the behavior 
 #### WHAT ARE FEATURE FILES?
 Feature files are written in plain text and contain scenarios that describe the expected behavior of a particular feature of your application. They typically use a structured format like Gherkin, which is a language for specifying behavior using keywords like "Given," "When," and "Then."
 
-### Step 2: Install Behave
+### Step 1: Install Behave
 You can install Behave using Python's package manager, pip. Open your command prompt or terminal and run the following command:
 
 `pip install behave`
