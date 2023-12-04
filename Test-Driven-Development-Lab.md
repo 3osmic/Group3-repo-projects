@@ -54,25 +54,25 @@ Once installed, a "Successfully installed" message should be displayed.
 
 Note: If you find that you have problems installing behave on your computer, please navigate to the [FAQ](#faq) section of this document
 
-###  Step 2 (RED STAGE)
+###  Step 2: (RED STAGE)
 The purpose of this phase is to write a test that informs the implementation of a feature.
 
 Here is an example of the "in the red" stage:
 ![s1](https://github.com/CbarNC/Group3-repo-projects/blob/Test-Driven-Development---(TDD)/s1.gif?raw=true)
 
-###  Step 3 (GREEN STAGE)
+###  Step 3: (GREEN STAGE)
 The purpose of this phase is to implement tests that pass
 
 Here is an example of the "in the green" stage:
 ![s2](https://github.com/CbarNC/Group3-repo-projects/blob/Test-Driven-Development---(TDD)/s2.gif?raw=true)
 
-###  Step 4 (REFACTOR STAGE)
+###  Step 4: (REFACTOR STAGE)
 The purpose of this phase is to implement your code better or more efficiently.
 
 Here is an example of the "in the green refactor" stage:
 ![s3](https://github.com/CbarNC/Group3-repo-projects/blob/Test-Driven-Development---(TDD)/s3.gif?raw=true)
 
-###  Step 5 (Do It Yourself - Writing a Test File For the Signup Page)
+###  Step 5: (Do It Yourself - Writing a Test File For the Signup Page)
 Here is a breakdown of the test_app.py file:
 
 ```python
