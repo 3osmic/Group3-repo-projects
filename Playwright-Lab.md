@@ -1,6 +1,6 @@
 _______________________________________________________________________
 
-	Group 3	Playwright Testing LAB	
+	Group 3	PLAYWRIGHT LAB	
 _______________________________________________________________________
 
 
@@ -18,7 +18,6 @@ _______________________________________________________________________
 - Must have a basic level of knowledge of the python programming language
 - Must have a basic level of knowledge of html
 - Must have knowledge about how to use locators
-- Must have basic knowledge of javascript
 
 ## BEFORE YOU GET STARTED
 You will need the following in order for your tests to perform correctly
@@ -97,7 +96,7 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/776fa3e5-7d7c-44
 
 
 
-### Step 5: Testing the Webpage
+### Step 5: (Do It Yourself - Testing the Webpage)
 Below is a breakdown example of the following code in order for you to be able to test your webpage.
 
 ```python
@@ -169,7 +168,7 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/3c0aa2c1-6c58-4f
 - Close the content and browser: `context.close() | browser.close()`
 - Use the `sync_playwright()` content manager to run the function: `with sync_playwright() as playwright: test_webpage(playwright)`
 
-### Step 6: Testing the Input Box (Contact Us)
+### Step 6: (Do It Yourself - Testing the Input Box (Contact Us))
 Below is a breakdown example of the following code in order for you to be able to test your input box.
 
 ```python
@@ -220,7 +219,7 @@ https://github.com/CbarNC/Group3-repo-projects/assets/137305186/50a80837-7fd2-46
 - Close the content and browser: `context.close() | browser.close()`
 - Use the `sync_playwright()` content manager to run the function: `with sync_playwright() as playwright: test_webpage(playwright)`
 
-### Step 7: Testing the Radio Button (Contact Us)
+### Step 7: (Do It Yourself - Testing the Radio Button (Contact Us))
 Below is a breakdown example of the following code in order for your you to be able to test your radio button.
 
 ```python
