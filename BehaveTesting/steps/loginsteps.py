@@ -16,11 +16,11 @@ def login_page(context):
 def user_pass(context):
     ui = "test_user123"
     pi = "password123"
-    context.driver.find_element(By.ID, 'login-username').send_keys(ui)
+    context.driver.find_element(By.ID, 'username_or_email').send_keys(ui)
     time.sleep(2)
-    context.driver.find_element(By.ID, 'login-password').send_keys(pi)
+    context.driver.find_element(By.ID, 'password').send_keys(pi)
     time.sleep(2)
-    screenshot = Image.open("screenshot2.png")
+    screenshot = Image.open("BrowserScreenshots/screenshot2.png")
     screenshot.show()
 
 
