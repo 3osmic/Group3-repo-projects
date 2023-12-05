@@ -1,3 +1,4 @@
+from Screenshot import Screenshot
 from behave import *
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -19,11 +20,13 @@ def select_button(context):
         radioButton_t = radioButton.get_attribute("value")
         if radioButton_t == "yes":
             radioButton.click()
-            time.sleep(2)
+            time.sleep(4)
 
 
 @then('the user should see radio button yes selected')
 def radio_status(context):
-    context.driver.get("https://cbarnc.github.io/Group3-repo-projects/")
-    screenshot = Image.open("screenshot-2.png")
+    ob = Screenshot.Screenshot()
+    img_url = ob.full_screenshot(context.driver, save_path=r'.', image_name='myRadioimage.png', is_load_at_runtime=True,
+                                 load_wait_time=0)
+    screenshot = Image.open(img_url)
     screenshot.show()
