@@ -9,23 +9,21 @@ from PIL import Image
 def user_on_registration(context):
     context.driver = webdriver.Chrome()
     context.driver.maximize_window()
-    context.driver.get('https://cbarnc.github.io/Group3-repo-projects/signIn.html')
-    create_account_link = context.driver.find_element(By.ID, "linkCreateAccount")
-    create_account_link.click()
+    context.driver.get('https://cbarnc.github.io/Group3-repo-projects/signup.html')
     time.sleep(5)
 
 
 @when('the user fills in their information')
 def user_fills_information(context):
-    context.driver.find_element(By.ID, "signupUsername").send_keys("test_user123")
+    context.driver.find_element(By.NAME, "username").send_keys("test_user123")
     time.sleep(2)
-    context.driver.find_element(By.ID, "signupEmailaddress").send_keys("johndoe@example.com")
+    context.driver.find_element(By.ID, "signUpEmail").send_keys("johndoe@example.com")
     time.sleep(2)
-    context.driver.find_element(By.ID, "signupPassword").send_keys("password123")
+    context.driver.find_element(By.NAME, "password").send_keys("password123")
     time.sleep(2)
-    context.driver.find_element(By.ID, "signupConfirmPassword").send_keys("password123")
+    context.driver.find_element(By.NAME, "confirm-password").send_keys("password123")
     time.sleep(2)
-    screenshot = Image.open("screenshot1.png")
+    screenshot = Image.open("BrowserScreenshots/screenshot1.png")
     screenshot.show()
 
 
