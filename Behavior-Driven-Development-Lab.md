@@ -142,39 +142,36 @@ from PIL import Image
 
 @given('the user is on the registration page')
 def user_on_registration(context):
-  context.driver = webdriver.Chrome()
-  context.driver.maximize_window()
-  context.driver.get('https://cbarnc.github.io/Group3-repo-projects/signIn.html')
-  create_account_link = context.driver.find_element(By.ID, "linkCreateAccount")
-  create_account_link.click()
-  time.sleep(5)
+    context.driver = webdriver.Chrome()
+    context.driver.maximize_window()
+    context.driver.get('https://cbarnc.github.io/Group3-repo-projects/signup.html')
+    time.sleep(5)
 
 
 @when('the user fills in their information')
 def user_fills_information(context):
-  context.driver.find_element(By.ID, "signupUsername").send_keys("test_user123")
-  time.sleep(2)
-  context.driver.find_element(By.ID, "signupEmailaddress").send_keys("johndoe@example.com")
-  time.sleep(2)
-  context.driver.find_element(By.ID, "signupPassword").send_keys("password123")
-  time.sleep(2)
-  context.driver.find_element(By.ID, "signupConfirmPassword").send_keys("password123")
-  time.sleep(2)
-  screenshot = Image.open("BrowserScreenshots/screenshot1.png")
-  screenshot.show()
+    context.driver.find_element(By.NAME, "username").send_keys("test_user123")
+    time.sleep(2)
+    context.driver.find_element(By.ID, "signUpEmail").send_keys("johndoe@example.com")
+    time.sleep(2)
+    context.driver.find_element(By.NAME, "password").send_keys("password123")
+    time.sleep(2)
+    context.driver.find_element(By.NAME, "confirm-password").send_keys("password123")
+    time.sleep(2)
+    screenshot = Image.open("BrowserScreenshots/screenshot1.png")
+    screenshot.show()
 
 
 @when('clicks the "Register" button')
 def click_register(context):
-  submit_confirm = context.driver.find_element(By.ID, "signupSubmit")
-  submit_confirm.click()
-  time.sleep(5)
+    submit_confirm = context.driver.find_element(By.ID, "signupSubmit")
+    submit_confirm.click()
+    time.sleep(5)
 
 
 @then('the user should be logged in')
 def redirect(context):
-  context.driver.get("https://cbarnc.github.io/Group3-repo-projects/")
-
+    context.driver.get("https://cbarnc.github.io/Group3-repo-projects/")
 ```
 ### BREAKDOWN 1 -
 
@@ -195,7 +192,8 @@ def redirect(context):
     - It then adds a delay of 5 seconds using `time.sleep(5)`
   - *user_fills_information*
     - The `@when` decorator, represents the action of the user filling in their information
-    - It finds elements on the page with the IDs "signupUsername", "signupEmailaddress", "signupPassword", "signupConfirmPassword" and enters values into them
+    - It finds elements on the page with the names "username", "password", "confirm-password" and enters values into them
+    - It also finds an element on the page with the id "signUpEmail" and enters the value into it.
     - It adds delays of 2 seconds between actions
     - It uses the `Screenshot` class to capture a screenshot and display it using PIL
   - *click_register*
