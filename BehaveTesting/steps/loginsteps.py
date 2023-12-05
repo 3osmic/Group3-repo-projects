@@ -1,3 +1,4 @@
+from Screenshot import Screenshot
 from behave import *
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -20,8 +21,13 @@ def user_pass(context):
     time.sleep(2)
     context.driver.find_element(By.NAME, 'password').send_keys(pi)
     time.sleep(2)
-    screenshot = Image.open("BrowserScreenshots/screenshot2.png")
+    ob = Screenshot.Screenshot()
+    img_url = ob.full_screenshot(context.driver, save_path=r'.', image_name='myLoginImage.png', is_load_at_runtime=True,
+                                 load_wait_time=0)
+    screenshot = Image.open(img_url)
     screenshot.show()
+    # screenshot = Image.open("BrowserScreenshots/screenshot2.png")
+    # screenshot.show()
 
 
 @when('click the "Login" button')
