@@ -24,7 +24,7 @@ def menu_list(context):
     menu_elements = context.driver.find_elements(By.CLASS_NAME, 'menu')
     assert len(menu_elements) > 0, "No 'menu' elements found on the page"
     time.sleep(2)
-    screenshot = Image.open("screenshot3.png")
+    screenshot = Image.open("BrowserScreenshots/screenshot3.png")
     screenshot.show()
 
 
