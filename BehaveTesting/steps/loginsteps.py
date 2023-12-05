@@ -9,7 +9,7 @@ from PIL import Image
 def login_page(context):
     context.driver = webdriver.Chrome()
     context.driver.maximize_window()
-    context.driver.get("https://cbarnc.github.io/Group3-repo-projects/signIn.html")
+    context.driver.get("https://cbarnc.github.io/Group3-repo-projects/signin.html")
 
 
 @when('they enter valid username and password')
